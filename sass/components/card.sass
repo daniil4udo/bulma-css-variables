@@ -49,11 +49,11 @@ $card-media-margin: var(--block-spacing, #{$block-spacing}) !default
 
 %card-item
   &:first-child
-    border-top-left-radius: $card-radius
-    border-top-right-radius: $card-radius
+    border-top-left-radius: var(--card-radius)
+    border-top-right-radius: var(--card-radius)
   &:last-child
-    border-bottom-left-radius: $card-radius
-    border-bottom-right-radius: $card-radius
+    border-bottom-left-radius: var(--card-radius)
+    border-bottom-right-radius: var(--card-radius)
 
 .card-header
   @extend %card-item
@@ -85,12 +85,12 @@ $card-media-margin: var(--block-spacing, #{$block-spacing}) !default
   position: relative
   &:first-child
     img
-      border-top-left-radius: $card-radius
-      border-top-right-radius: $card-radius
+      border-top-left-radius: var(--card-radius)
+      border-top-right-radius: var(--card-radius)
   &:last-child
     img
-      border-bottom-left-radius: $card-radius
-      border-bottom-right-radius: $card-radius
+      border-bottom-left-radius: var(--card-radius)
+      border-bottom-right-radius: var(--card-radius)
 
 .card-content
   @extend %card-item
