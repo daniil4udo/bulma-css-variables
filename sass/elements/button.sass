@@ -60,33 +60,39 @@ $button-colors: $colors !default
   --button-font-size: var(--size-large, #{$size-large})
 
 .button
+  --button-color: #{$button-color}
   --button-background-color: #{$button-background-color}
+  --button-family: #{$button-family}
   --button-border-color: #{$button-border-color}
   --button-border-width: #{$button-border-width}
-  --button-color: #{$button-color}
-  --button-family: #{$button-family}
   --button-padding-vertical: #{$button-padding-vertical}
   --button-padding-horizontal: #{$button-padding-horizontal}
-  --button-hover-border-color: #{$button-hover-border-color}
   --button-hover-color: #{$button-hover-color}
+  --button-hover-border-color: #{$button-hover-border-color}
+  --button-focus-color: #{$button-focus-color}
   --button-focus-border-color: #{$button-focus-border-color}
   --button-focus-box-shadow-size: #{$button-focus-box-shadow-size}
   --button-focus-box-shadow-color-hsla: #{$button-focus-box-shadow-color-hsla}
   --button-focus-box-shadow-color: #{$button-focus-box-shadow-color}
-  --button-focus-color: #{$button-focus-color}
-  --button-active-border-color: #{$button-active-border-color}
   --button-active-color: #{$button-active-color}
+  --button-active-border-color: #{$button-active-border-color}
   --button-text-color: #{$button-text-color}
   --button-text-decoration: #{$button-text-decoration}
   --button-text-hover-background-color: #{$button-text-hover-background-color}
   --button-text-hover-color: #{$button-text-hover-color}
+  --button-ghost-background: #{$button-ghost-background}
+  --button-ghost-border-color: #{$button-ghost-border-color}
+  --button-ghost-color: #{$button-ghost-color}
+  --button-ghost-decoration: #{$button-ghost-decoration}
+  --button-ghost-hover-color: #{$button-ghost-hover-color}
+  --button-ghost-hover-decoration: #{$button-ghost-hover-decoration}
   --button-disabled-background-color: #{$button-disabled-background-color}
   --button-disabled-border-color: #{$button-disabled-border-color}
   --button-disabled-shadow: #{$button-disabled-shadow}
   --button-disabled-opacity: #{$button-disabled-opacity}
+  --button-static-color: #{$button-static-color}
   --button-static-background-color: #{$button-static-background-color}
   --button-static-border-color: #{$button-static-border-color}
-  --button-static-color: #{$button-static-color}
   @extend %control
   @extend %unselectable
   background-color: var(--button-background-color)
@@ -159,14 +165,14 @@ $button-colors: $colors !default
       border-color: transparent
       box-shadow: none
   &.is-ghost
-    background: $button-ghost-background
-    border-color: $button-ghost-border-color
-    color: $button-ghost-color
-    text-decoration: $button-ghost-decoration
+    background: var(--button-ghost-background)
+    border-color: var(--button-ghost-border-color)
+    color: var(--button-ghost-color)
+    text-decoration: var(--button-ghost-decoration)
     &:hover,
     &.is-hovered
-      color: $button-ghost-hover-color
-      text-decoration: $button-ghost-hover-decoration
+      color: var(--button-ghost-hover-color)
+      text-decoration: var(--button-ghost-hover-decoration)
   @each $name, $pair in $button-colors
     $color: nth($pair, 1)
     $color-invert: nth($pair, 2)

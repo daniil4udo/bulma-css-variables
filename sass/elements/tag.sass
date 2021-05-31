@@ -3,6 +3,7 @@
 $tag-background-color: $background !default
 $tag-color: var(--text, #{$text}) !default
 $tag-radius: var(--radius, #{$radius}) !default
+$tag-font-size: var(--size-small, #{$size-small}) !default
 $tag-delete-margin: 1px !default
 
 $tag-colors: $colors !default
@@ -60,9 +61,9 @@ $tag-colors: $colors !default
 
 .tag:not(body)
   --tag-background-color: #{$tag-background-color}
-  --tag-radius: #{$tag-radius}
   --tag-color: #{$tag-color}
-  --tag-font-size: #{$size-small}
+  --tag-radius: #{$tag-radius}
+  --tag-font-size: #{$tag-font-size}
   --tag-delete-margin: #{$tag-delete-margin}
   align-items: center
   background-color: var(--tag-background-color)
