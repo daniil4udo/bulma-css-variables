@@ -11,6 +11,7 @@ $media-level-2-spacing: 0.5rem !default
 
 .media
   --media-border-color: #{$media-border-color}
+  --media-border-size: #{$media-border-size}
   --media-spacing: #{$media-spacing}
   --media-spacing-large: #{$media-spacing-large}
   align-items: flex-start
@@ -30,9 +31,9 @@ $media-level-2-spacing: 0.5rem !default
       & + .media
         margin-top: $media-level-2-spacing
   & + .media
-    border-top: $media-border-size solid $media-border-color
-    margin-top: $media-spacing
-    padding-top: $media-spacing
+    border-top: var(--media-border-size) solid var(--media-border-color)
+    margin-top: var(--media-spacing)
+    padding-top: var(--media-spacing)
   // Sizes
   &.is-large
     & + .media
