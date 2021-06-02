@@ -20,11 +20,11 @@ $label-colors: $form-colors !default
     margin-bottom: 0.5em
   // Sizes
   &.is-small
-    font-size: var(--size-small, #{$size-small})
+    --label-font-size: var(--size-small, #{$size-small})
   &.is-medium
-    font-size: var(--size-medium, #{$size-medium})
+    --label-font-size: var(--size-medium, #{$size-medium})
   &.is-large
-    font-size: var(--size-large, #{$size-large})
+    --label-font-size: var(--size-large, #{$size-large})
 
 .help
   --help-font-size: #{$help-size}
