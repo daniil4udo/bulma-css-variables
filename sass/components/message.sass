@@ -22,7 +22,7 @@ $message-body-pre-code-background-color: transparent !default
 $message-header-body-border-width: 0 !default
 $message-colors: $colors !default
 
-.message
+\:root
   --message-background-color: #{$message-background-color}
   --message-font-size: #{$message-font-size}
   --message-radius: #{$message-radius}
@@ -39,6 +39,8 @@ $message-colors: $colors !default
   --message-body-pre-background-color: #{$message-body-pre-background-color}
   --message-header-body-border-width: #{$message-header-body-border-width}
   --message-body-pre-code-background-color: #{$message-body-pre-code-background-color}
+
+.message
   @extend %block
   background-color: var(--message-background-color)
   border-radius: var(--message-radius)

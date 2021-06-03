@@ -29,7 +29,7 @@ $tabs-toggle-link-active-background-color: var(--link, #{$link}) !default
 $tabs-toggle-link-active-border-color: var(--link, #{$link}) !default
 $tabs-toggle-link-active-color: var(--link-invert, #{$link-invert}) !default
 
-.tabs
+\:root
   --tabs-font-size: #{$tabs-font-size}
   --tabs-border-bottom-color: #{$tabs-border-bottom-color}
   --tabs-border-bottom-style: #{$tabs-border-bottom-style}
@@ -55,6 +55,8 @@ $tabs-toggle-link-active-color: var(--link-invert, #{$link-invert}) !default
   --tabs-toggle-link-active-background-color: #{$tabs-toggle-link-active-background-color}
   --tabs-toggle-link-active-border-color: #{$tabs-toggle-link-active-border-color}
   --tabs-toggle-link-active-color: #{$tabs-toggle-link-active-color}
+
+.tabs
   @extend %block
   @extend %unselectable
   +overflow-touch

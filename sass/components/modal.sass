@@ -32,7 +32,7 @@ $modal-card-body-padding: 20px !default
 
 $modal-breakpoint: $tablet !default
 
-.modal
+\:root
   --modal-z: #{$modal-z}
   --modal-background-background-color: #{$modal-background-background-color}
   --modal-content-width: #{$modal-content-width}
@@ -54,6 +54,8 @@ $modal-breakpoint: $tablet !default
   --modal-card-foot-border-top: #{$modal-card-foot-border-top}
   --modal-card-body-background-color: #{$modal-card-body-background-color}
   --modal-card-body-padding: #{$modal-card-body-padding}
+
+.modal
   @extend %overlay
   align-items: center
   display: none

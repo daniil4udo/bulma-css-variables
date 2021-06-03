@@ -8,6 +8,13 @@ $tag-delete-margin: 1px !default
 
 $tag-colors: $colors !default
 
+\:root
+  --tag-background-color: #{$tag-background-color}
+  --tag-color: #{$tag-color}
+  --tag-radius: #{$tag-radius}
+  --tag-font-size: #{$tag-font-size}
+  --tag-delete-margin: #{$tag-delete-margin}
+
 .tags
   align-items: center
   display: flex
@@ -60,11 +67,6 @@ $tag-colors: $colors !default
           border-bottom-left-radius: 0
 
 .tag:not(body)
-  --tag-background-color: #{$tag-background-color}
-  --tag-color: #{$tag-color}
-  --tag-radius: #{$tag-radius}
-  --tag-font-size: #{$tag-font-size}
-  --tag-delete-margin: #{$tag-delete-margin}
   align-items: center
   background-color: var(--tag-background-color)
   border-radius: var(--tag-radius)

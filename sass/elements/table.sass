@@ -27,7 +27,7 @@ $table-striped-row-even-hover-background-color: var(--scheme-main-ter, #{$scheme
 
 $table-colors: $colors !default
 
-.table
+\:root
   --table-color: #{$table-color}
   --table-cell-border-width: #{$table-cell-border-width}
   --table-cell-border: #{$table-cell-border}
@@ -45,6 +45,8 @@ $table-colors: $colors !default
   --table-row-active-color: #{$table-row-active-color}
   --table-striped-row-even-background-color: #{$table-striped-row-even-background-color}
   --table-striped-row-even-hover-background-color: #{$table-striped-row-even-hover-background-color}
+
+.table
   @extend %block
   background-color: var(--table-body-background-color)
   color: var(--table-color)

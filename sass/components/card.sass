@@ -24,7 +24,7 @@ $card-footer-padding: 0.75rem !default
 
 $card-media-margin: var(--block-spacing, #{$block-spacing}) !default
 
-.card
+\:root
   --card-background-color: #{$card-background-color}
   --card-shadow: #{$card-shadow}
   --card-color: #{$card-color}
@@ -40,6 +40,8 @@ $card-media-margin: var(--block-spacing, #{$block-spacing}) !default
   --card-footer-border-top: #{$card-footer-border-top}
   --card-footer-padding: #{$card-footer-padding}
   --card-media-margin: #{$card-media-margin}
+
+.card
   background-color: var(--card-background-color)
   border-radius: var(--card-radius)
   box-shadow: var(--card-shadow)

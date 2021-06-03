@@ -10,7 +10,7 @@ $breadcrumb-item-padding-horizontal: 0.75em !default
 
 $breadcrumb-item-separator-color: var(--border-hover, #{$border-hover}) !default
 
-.breadcrumb
+\:root
   --breadcrumb-font-size: #{$breadcrumb-font-size}
   --breadcrumb-item-color: #{$breadcrumb-item-color}
   --breadcrumb-item-hover-color: #{$breadcrumb-item-hover-color}
@@ -18,6 +18,8 @@ $breadcrumb-item-separator-color: var(--border-hover, #{$border-hover}) !default
   --breadcrumb-item-separator-color: #{$breadcrumb-item-separator-color}
   --breadcrumb-item-padding-vertical: #{$breadcrumb-item-padding-vertical}
   --breadcrumb-item-padding-horizontal: #{$breadcrumb-item-padding-horizontal}
+
+.breadcrumb
   @extend %block
   @extend %unselectable
   font-size: var(--breadcrumb-font-size)

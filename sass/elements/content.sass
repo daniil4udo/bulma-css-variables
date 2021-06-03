@@ -21,7 +21,7 @@ $content-table-head-cell-color: var(--text-strong, #{$text-strong}) !default
 $content-table-foot-cell-border-width: 2px 0 0 !default
 $content-table-foot-cell-color: var(--text-strong, #{$text-strong}) !default
 
-.content
+\:root
   --content-font-size: #{$content-font-size}
   --content-heading-color: #{$content-heading-color}
   --content-heading-weight: #{$content-heading-weight}
@@ -38,6 +38,8 @@ $content-table-foot-cell-color: var(--text-strong, #{$text-strong}) !default
   --content-table-head-cell-color: #{$content-table-head-cell-color}
   --content-table-foot-cell-border-width: #{$content-table-foot-cell-border-width}
   --content-table-foot-cell-color: #{$content-table-foot-cell-color}
+
+.content
   @extend %block
   font-size: var(--content-font-size)
   // Inline

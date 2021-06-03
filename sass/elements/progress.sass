@@ -10,12 +10,14 @@ $progress-indeterminate-duration: 1.5s !default
 
 $progress-colors: $colors !default
 
-.progress
+\:root
   --progress-height: #{$progress-height}
   --progress-bar-background-color: #{$progress-bar-background-color}
   --progress-value-background-color: #{$progress-value-background-color}
   --progress-border-radius: #{$progress-border-radius}
   --progress-indeterminate-duration: #{$progress-indeterminate-duration}
+
+.progress
   @extend %block
   -moz-appearance: none
   -webkit-appearance: none

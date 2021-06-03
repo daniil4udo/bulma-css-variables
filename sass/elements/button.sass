@@ -59,7 +59,7 @@ $button-colors: $colors !default
 =button-large
   --button-font-size: var(--size-large, #{$size-large})
 
-.button
+\:root
   --button-color: #{$button-color}
   --button-background-color: #{$button-background-color}
   --button-family: #{$button-family}
@@ -93,6 +93,8 @@ $button-colors: $colors !default
   --button-static-color: #{$button-static-color}
   --button-static-background-color: #{$button-static-background-color}
   --button-static-border-color: #{$button-static-border-color}
+
+.button
   @extend %control
   @extend %unselectable
   background-color: var(--button-background-color)

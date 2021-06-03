@@ -13,7 +13,7 @@ $file-name-max-width: 16em !default
 
 $file-colors: $form-colors !default
 
-.file
+\:root
   --file-border-color: #{$file-border-color}
   --file-radius: #{$file-radius}
   --file-cta-background-color: #{$file-cta-background-color}
@@ -24,6 +24,8 @@ $file-colors: $form-colors !default
   --file-name-border-style: #{$file-name-border-style}
   --file-name-border-width: #{$file-name-border-width}
   --file-name-max-width: #{$file-name-max-width}
+
+.file
   @extend %unselectable
   align-items: stretch
   display: flex

@@ -16,10 +16,12 @@
 .loader
   @extend %loader
 
-.number
+\:root
   --number-background: var(--background, #{$background})
   --number-radius-rounded: var(--radius-rounded, #{$radius-rounded})
   --number-font-size: var(--size-medium, #{$size-medium})
+
+.number
   align-items: center
   background-color: var(--number-background)
   border-radius: var(--number-radius-rounded)

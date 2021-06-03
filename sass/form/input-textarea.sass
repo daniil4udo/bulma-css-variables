@@ -51,10 +51,12 @@ $textarea-colors: $form-colors !default
     padding-left: 0
     padding-right: 0
 
-.textarea
+\:root
   --textarea-padding: #{$textarea-padding}
   --textarea-max-height: #{$textarea-max-height}
   --textarea-min-height: #{$textarea-min-height}
+
+.textarea
   @extend %input-textarea
   display: block
   max-width: 100%

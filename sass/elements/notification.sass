@@ -9,12 +9,14 @@ $notification-padding-rtl: 1.25rem 1.5rem 1.25rem 2.5rem !default
 
 $notification-colors: $colors !default
 
-.notification
+\:root
   --notification-background-color: #{$notification-background-color}
   --notification-code-background-color: #{$notification-code-background-color}
   --notification-radius: #{$notification-radius}
   --notification-padding-ltr: #{$notification-padding-ltr}
   --notification-padding-rtl: #{$notification-padding-rtl}
+
+.notification
   @extend %block
   background-color: var(--notification-background-color)
   border-radius: var(--notification-radius)

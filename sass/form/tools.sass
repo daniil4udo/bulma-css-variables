@@ -8,10 +8,12 @@ $control-font-size: var(--size-normal, #{$size-normal}) !default
 
 $label-colors: $form-colors !default
 
-.label
+\:root
   --label-font-size: #{$label-font-size}
   --label-color: #{$label-color}
   --label-font-weight: #{$label-weight}
+
+.label
   color: var(--label-color)
   display: block
   font-size: var(--label-font-size)
@@ -26,8 +28,10 @@ $label-colors: $form-colors !default
   &.is-large
     --label-font-size: var(--size-large, #{$size-large})
 
-.help
+\:root
   --help-font-size: #{$help-size}
+
+.help
   display: block
   font-size: var(--help-font-size)
   margin-top: 0.25rem

@@ -31,7 +31,7 @@ $panel-block-active-icon-color: $link !default
 $panel-icon-color: $text-light !default
 $panel-colors: $colors !default
 
-.panel
+\:root
   --panel-font-size: #{$panel-font-size}
   --panel-margin: #{$panel-margin}
   --panel-item-border: #{$panel-item-border}
@@ -55,6 +55,8 @@ $panel-colors: $colors !default
   --panel-block-active-color: #{$panel-block-active-color}
   --panel-block-active-icon-color: #{$panel-block-active-icon-color}
   --panel-icon-color: #{$panel-icon-color}
+
+.panel
   border-radius: var(--panel-radius)
   box-shadow: var(--panel-shadow)
   font-size: var(--panel-font-size)

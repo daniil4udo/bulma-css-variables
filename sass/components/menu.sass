@@ -19,7 +19,7 @@ $menu-label-font-size: 0.75em !default
 $menu-label-letter-spacing: 0.1em !default
 $menu-label-spacing: 1em !default
 
-.menu
+\:root
   --menu-font-size: #{$menu-font-size}
   --menu-list-line-height: #{$menu-list-line-height}
   --menu-item-radius: #{$menu-item-radius}
@@ -36,6 +36,8 @@ $menu-label-spacing: 1em !default
   --menu-label-font-size: #{$menu-label-font-size}
   --menu-label-letter-spacing: #{$menu-label-letter-spacing}
   --menu-label-spacing: #{$menu-label-spacing}
+
+.menu
   font-size: var(--menu-font-size)
   // Sizes
   &.is-small

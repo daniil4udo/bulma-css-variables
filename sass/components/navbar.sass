@@ -61,7 +61,7 @@ $navbar-colors: $colors !default
   right: 0
   z-index: var(--navbar-fixed-z)
 
-.navbar
+\:root
   --navbar-background-color: #{$navbar-background-color}
   --navbar-box-shadow-size: #{$navbar-box-shadow-size}
   --navbar-box-shadow-color: #{$navbar-box-shadow-color}
@@ -101,6 +101,8 @@ $navbar-colors: $colors !default
   --navbar-divider-background-color: #{$navbar-divider-background-color}
   --navbar-divider-height: #{$navbar-divider-height}
   --navbar-bottom-box-shadow-size: #{$navbar-bottom-box-shadow-size}
+
+.navbar
   background-color: var(--navbar-background-color)
   min-height: var(--navbar-height)
   position: relative

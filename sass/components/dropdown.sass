@@ -21,7 +21,7 @@ $dropdown-item-active-background-color: var(--link, #{$link}) !default
 
 $dropdown-divider-background-color: var(--border-light, #{$border-light}) !default
 
-.dropdown
+\:root
   --dropdown-content-offset: #{$dropdown-content-offset}
   --dropdown-menu-min-width: #{$dropdown-menu-min-width}
   --dropdown-content-z: #{$dropdown-content-z}
@@ -36,6 +36,8 @@ $dropdown-divider-background-color: var(--border-light, #{$border-light}) !defau
   --dropdown-item-active-background-color: #{$dropdown-item-active-background-color}
   --dropdown-item-active-color: #{$dropdown-item-active-color}
   --dropdown-divider-background-color: #{$dropdown-divider-background-color}
+
+.dropdown
   display: inline-flex
   position: relative
   vertical-align: top
