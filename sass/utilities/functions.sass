@@ -117,27 +117,36 @@
   @return $color
 
 @function bulmaRgba($color, $alpha)
-  @if type-of($color) == 'string' and map-has-key($colors, $color)
-    @return rgba(hsl(var(--#{$color}-h), var(--#{$color}-s), var(--#{$color}-l)), #{$alpha})
   @if type-of($color) != 'color'
     @return $color
   @return rgba($color, $alpha)
 
-@function bulmaDarken($color, $amount)
+@function bulmaCSSVarRgba($color, $alpha)
   @if type-of($color) == 'string' and map-has-key($colors, $color)
-    $color-l: calc(var(--#{$color}-l) - #{$amount})
-    @return hsla(var(--#{$color}-h), var(--#{$color}-s), #{$color-l}, var(--#{$color}-a))
+    @return rgba(hsl(var(--#{$color}-h), var(--#{$color}-s), var(--#{$color}-l)), #{$alpha})
+  @return $color
+
+@function bulmaDarken($color, $amount)
   @if type-of($color) != 'color'
     @return $color
   @return darken($color, $amount)
 
-@function bulmaLighten($color, $amount)
+@function bulmaCSSVarDarken($color, $amount)
   @if type-of($color) == 'string' and map-has-key($colors, $color)
-    $color-l: calc(var(--#{$color}-l) + #{$amount})
+    $color-l: calc(var(--#{$color}-l) - #{$amount})
     @return hsla(var(--#{$color}-h), var(--#{$color}-s), #{$color-l}, var(--#{$color}-a))
+  @return $color
+
+@function bulmaLighten($color, $amount)
   @if type-of($color) != 'color'
     @return $color
   @return lighten($color, $amount)
+
+@function bulmaCSSVarLighten($color, $amount)
+  @if type-of($color) == 'string' and map-has-key($colors, $color)
+    $color-l: calc(var(--#{$color}-l) + #{$amount})
+    @return hsla(var(--#{$color}-h), var(--#{$color}-s), #{$color-l}, var(--#{$color}-a))
+  @return $color
 
 @function bulmaToRGB($color)
   @return red($color), green($color), blue($color)
