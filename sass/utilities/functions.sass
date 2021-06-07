@@ -117,54 +117,30 @@
   @return $color
 
 @function bulmaRgba($color, $alpha)
+  @if type-of($color) == 'string' and map-has-key($colors, $color)
+    @return rgba(hsl(var(--#{$color}-h), var(--#{$color}-s), var(--#{$color}-l)), #{$alpha})
   @if type-of($color) != 'color'
     @return $color
   @return rgba($color, $alpha)
 
 @function bulmaDarken($color, $amount)
+  @if type-of($color) == 'string' and map-has-key($colors, $color)
+    $color-l: calc(var(--#{$color}-l) - #{$amount})
+    @return hsla(var(--#{$color}-h), var(--#{$color}-s), #{$color-l}, var(--#{$color}-a))
   @if type-of($color) != 'color'
     @return $color
   @return darken($color, $amount)
 
 @function bulmaLighten($color, $amount)
+  @if type-of($color) == 'string' and map-has-key($colors, $color)
+    $color-l: calc(var(--#{$color}-l) + #{$amount})
+    @return hsla(var(--#{$color}-h), var(--#{$color}-s), #{$color-l}, var(--#{$color}-a))
   @if type-of($color) != 'color'
     @return $color
   @return lighten($color, $amount)
 
 @function bulmaToRGB($color)
   @return red($color), green($color), blue($color)
-
-@function bulmaSetOpacity($name, $alpha: 1)
-  @if not map-has-key($colors, $name)
-    @error "Not supported color '#{$name}'!"
-
-  @if type-of($name) == 'string'
-    $color-a: null
-
-    @if unitless($alpha)
-      $color-a: calc(var(--#{$name}-a) + #{$alpha})
-    @else
-      @error "Not supported unit '#{unit($alpha)}' as convert base!"
-
-    @return hsla(var(--#{$name}-h), var(--#{$name}-s), var(--#{$name}-l), #{$color-a})
-  @return $name
-
-@function bulmaSetLightness($name, $amount: 0%)
-  @if not map-has-key($colors, $name)
-    @error "Not supported color '#{$name}'!"
-
-  @if type-of($name) == 'string'
-    $color-l: null
-
-    @if unit($amount) == '%'
-      $color-l: calc(var(--#{$name}-l) + #{$amount})
-    @else if unitless($amount)
-      $color-l: calc(var(--#{$name}-l) + #{$amount}\%)
-    @else
-      @error "Not supported unit '#{unit($amount)}' as convert base!"
-
-    @return hsla(var(--#{$name}-h), var(--#{$name}-s), #{$color-l}, var(--#{$name}-a))
-  @return $name
 
 =registerCSSVar($name, $value, $at-root: true)
   @if $at-root
