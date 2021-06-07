@@ -2,8 +2,10 @@
 
 $level-item-spacing: calc(var(--block-spacing, #{$block-spacing}) / 2) !default
 
-.level
+\:root
   --level-item-spacing: #{$level-item-spacing}
+
+.level
   @extend %block
   align-items: center
   justify-content: space-between
