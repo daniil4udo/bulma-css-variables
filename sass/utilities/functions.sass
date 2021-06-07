@@ -172,19 +172,12 @@
   --#{$base}-invert: #{findColorInvert($color)}
 
   // Light color
-  $light-l: 96%
-  @if lightness($color) > 96%
-    $light-l: lightness($color)
-  --#{$base}-light-l: #{$light-l}
-  --#{$base}-light: hsla(var(--#{$base}-h), var(--#{$base}-s), var(--#{$base}-light-l), var(--#{$base}-a))
+  $light-l: lightness(findLightColor($color))
+  --#{$base}-light: hsla(var(--#{$base}-h), var(--#{$base}-s), #{$light-l}, var(--#{$base}-a))
 
   // Dark color
-  $base-l: 29%
-  $luminance: colorLuminance($color)
-  $luminance-delta: (0.53 - $luminance)
-  $dark-l: round($base-l + ($luminance-delta * 53))
-  --#{$base}-dark-l: #{$dark-l}
-  --#{$base}-dark: hsla(var(--#{$base}-h), var(--#{$base}-s), var(--#{$base}-dark-l), var(--#{$base}-a))
+  $dark-l: lightness(findDarkColor($color))
+  --#{$base}-dark: hsla(var(--#{$base}-h), var(--#{$base}-s), #{$dark-l}, var(--#{$base}-a))
 
 =registerCSSVarColors($colors, $prefix: '')
   @each $name, $components in $colors
