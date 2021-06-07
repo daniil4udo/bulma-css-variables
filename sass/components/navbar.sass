@@ -127,6 +127,12 @@ $navbar-colors: $colors !default
           &:hover,
           &.is-active
             background-color: var(--navbar-item-hover-background-color, #{bulmaDarken($color, 5%)})
+            color: var(--#{$name}-invert, #{$color-invert})
+        .navbar-link
+          &::after
+            border-color: var(--#{$name}-invert, #{$color-invert})
+      .navbar-burger
+        color: var(--#{$name}-invert, #{$color-invert})
       +from($navbar-breakpoint)
         --navbar-dropdown-item-active-background-color: var(--#{$name}, #{$color})
         --navbar-dropdown-item-active-color: var(--#{$name}-invert, #{$color-invert})
@@ -142,6 +148,19 @@ $navbar-colors: $colors !default
             &:hover,
             &.is-active
               background-color: var(--navbar-item-hover-background-color, #{bulmaDarken($color, 5%)})
+              color: var(--#{$name}-invert, #{$color-invert})
+          .navbar-link
+            &::after
+              border-color: var(--#{$name}-invert, #{$color-invert})
+        .navbar-item.has-dropdown:focus .navbar-link,
+        .navbar-item.has-dropdown:hover .navbar-link,
+        .navbar-item.has-dropdown.is-active .navbar-link
+          background-color: bulmaDarken($color, 5%)
+          color: var(--#{$name}-invert, #{$color-invert})
+        .navbar-dropdown
+          a.navbar-item
+            &.is-active
+              background-color: $color
               color: var(--#{$name}-invert, #{$color-invert})
   & > .container
     align-items: stretch
