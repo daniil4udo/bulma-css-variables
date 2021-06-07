@@ -79,7 +79,7 @@
 @function findColorInvert($color, $fallback: null)
   @if type-of($color) == 'color'
     @if (colorLuminance($color) > 0.55)
-      @return rgba(0, 0, 0, 0.7)
+      @return rgba(#000, 0.7)
     @else
       @return #fff
   @else if type-of($fallback) == 'color'

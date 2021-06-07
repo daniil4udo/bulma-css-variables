@@ -7,6 +7,7 @@
     --has-text-hover-#{$name}-l: calc(#{var(--#{$name}-l)} + #{var(--has-text-hover-delta)})
     --has-text-hover-color: hsla(var(--#{$name}-h), var(--#{$name}-s), var(--has-text-hover-#{$name}-l), var(--#{$name}-a))
     color: var(--#{$name}, #{$color}) !important
+  a.has-text-#{$name}
     &:hover,
     &:focus
       color: var(--has-text-hover-color, #{bulmaDarken($color, 10%)}) !important
