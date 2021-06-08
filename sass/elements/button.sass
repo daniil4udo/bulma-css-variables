@@ -179,14 +179,9 @@ $button-colors: $colors !default
     $color: nth($pair, 1)
     $color-invert: nth($pair, 2)
     &.is-#{$name}
-      --hover-background-l-delta: -2.5%
-      --hover-background-#{$name}-l: calc(#{var(--#{$name}-l)} + #{var(--hover-background-l-delta)})
-      --hover-background-color: hsla(var(--#{$name}-h), var(--#{$name}-s), var(--hover-background-#{$name}-l), var(--#{$name}-a))
-      --focus-box-shadow-color-hsla: hsla(var(--#{$name}-h), var(--#{$name}-s), var(--#{$name}-l), 0.25)
-      --focus-box-shadow-color: var(--focus-box-shadow-color-hsla, #{bulmaRgba($color, 0.25)})
-      --active-background-l-delta: -5%
-      --active-background-#{$name}-l: calc(#{var(--#{$name}-l)} + #{var(--active-background-l-delta)})
-      --active-background-color: hsla(var(--#{$name}-h), var(--#{$name}-s), var(--active-background-#{$name}-l), var(--#{$name}-a))
+      --hover-background-color: #{bulmaCSSVarDarken($name, 2.5%)}
+      --focus-box-shadow-color: #{bulmaCSSVarRgba($name, 0.25)}
+      --active-background-color: #{bulmaCSSVarDarken($name, 5%)}
       background-color: var(--#{$name}, #{$color})
       border-color: transparent
       color: var(--#{$name}-invert, #{$color-invert})
@@ -200,7 +195,7 @@ $button-colors: $colors !default
         border-color: transparent
         color: var(--#{$name}-invert, #{$color-invert})
         &:not(:active)
-          box-shadow: var(--button-focus-box-shadow-size) var(--focus-box-shadow-color)
+          box-shadow: var(--button-focus-box-shadow-size) var(--focus-box-shadow-color, #{bulmaRgba($color, 0.25)})
       &:active,
       &.is-active
         background-color: var(--active-background-color, #{bulmaDarken($color, 5%)})

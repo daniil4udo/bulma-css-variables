@@ -120,8 +120,7 @@ $navbar-colors: $colors !default
           color: var(--#{$name}-invert, #{$color-invert})
         & > a.navbar-item,
         .navbar-link
-          --navbar-item-hover-background-#{$name}-l: calc(var(--#{$name}-l) - 5%)
-          --navbar-item-hover-background-color: hsla(var(--#{$name}-h), var(--#{$name}-s), var(--navbar-item-hover-background-#{$name}-l), var(--#{$name}-a))
+          --navbar-item-hover-background-color: #{bulmaCSSVarDarken($name, 5%)}
           &:focus,
           &:hover,
           &.is-active
@@ -146,8 +145,7 @@ $navbar-colors: $colors !default
             &:focus,
             &:hover,
             &.is-active
-              --navbar-item-hover-background-#{$name}-l: calc(var(--#{$name}-l) - 5%)
-              --navbar-item-hover-background-color: hsla(var(--#{$name}-h), var(--#{$name}-s), var(--navbar-item-hover-background-#{$name}-l), var(--#{$name}-a))
+              --navbar-item-hover-background-color: #{bulmaCSSVarDarken($name, 5%)}
               background-color: var(--navbar-item-hover-background-color, #{bulmaDarken($color, 5%)})
               color: var(--#{$name}-invert, #{$color-invert})
           .navbar-link
@@ -156,7 +154,8 @@ $navbar-colors: $colors !default
         .navbar-item.has-dropdown:focus .navbar-link,
         .navbar-item.has-dropdown:hover .navbar-link,
         .navbar-item.has-dropdown.is-active .navbar-link
-          background-color: bulmaDarken($color, 5%)
+          --navbar-dropdown-item-hover-background-color: #{bulmaCSSVarDarken($name, 5%)}
+          background-color: var(--navbar-dropdown-item-hover-background-color, #{bulmaDarken($color, 5%)})
           color: var(--#{$name}-invert, #{$color-invert})
         .navbar-dropdown
           a.navbar-item

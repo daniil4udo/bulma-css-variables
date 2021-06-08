@@ -51,10 +51,8 @@ $select-colors: $form-colors !default
   @each $name, $pair in $select-colors
     $color: nth($pair, 1)
     &.is-#{$name}
-      --hover-border-delta: -5%
-      --hover-border-#{$name}-l: calc(#{var(--#{$name}-l)} + #{var(--hover-border-delta)})
-      --hover-border-color: hsla(var(--#{$name}-h), var(--#{$name}-s), var(--hover-border-#{$name}-l), var(--#{$name}-a))
-      --focus-box-shadow-color: hsla(var(--#{$name}-h), var(--#{$name}-s), var(--#{$name}-l), 0.25)
+      --hover-border-color: #{bulmaCSSVarDarken($name, 5%)}
+      --focus-box-shadow-color: #{bulmaCSSVarRgba($name, 0.25)}
       &:not(:hover)::after
         border-color: var(--#{$name}, #{$color})
       select
