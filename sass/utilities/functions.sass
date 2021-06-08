@@ -123,7 +123,7 @@
 
 @function bulmaCSSVarRgba($color, $alpha)
   @if type-of($color) == 'string' and map-has-key($colors, $color)
-    @return rgba(hsl(var(--#{$color}-h), var(--#{$color}-s), var(--#{$color}-l)), #{$alpha})
+    @return hsla(var(--#{$color}-h), var(--#{$color}-s), var(--#{$color}-l), #{$alpha})
   @return $color
 
 @function bulmaDarken($color, $amount)
@@ -182,11 +182,13 @@
 
   // Light color
   $light-l: lightness(findLightColor($color))
-  --#{$base}-light: hsla(var(--#{$base}-h), var(--#{$base}-s), #{$light-l}, var(--#{$base}-a))
+  --#{$base}-light-l: #{$light-l}
+  --#{$base}-light: hsla(var(--#{$base}-h), var(--#{$base}-s), var(--#{$base}-light-l), var(--#{$base}-a))
 
   // Dark color
   $dark-l: lightness(findDarkColor($color))
-  --#{$base}-dark: hsla(var(--#{$base}-h), var(--#{$base}-s), #{$dark-l}, var(--#{$base}-a))
+  --#{$base}-dark-l: #{$dark-l}
+  --#{$base}-dark: hsla(var(--#{$base}-h), var(--#{$base}-s), var(--#{$base}-dark-l), var(--#{$base}-a))
 
 =registerCSSVarColors($colors, $prefix: '')
   @each $name, $components in $colors
