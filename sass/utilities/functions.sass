@@ -192,6 +192,8 @@
   --#{$base}: hsla(var(--#{$base}-h), var(--#{$base}-s), var(--#{$base}-l), var(--#{$base}-a))
 
   // Invert color
+  $invert-l: lightness(findColorInvert($color))
+  --#{$base}-invert-l: #{$invert-l}
   --#{$base}-invert: #{findColorInvert($color)}
 
   // Light color
