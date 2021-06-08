@@ -133,7 +133,14 @@
 
 @function bulmaCSSVarDarken($color, $amount)
   @if type-of($color) == 'string' and map-has-key($colors, $color)
-    $color-l: calc(var(--#{$color}-l) - #{$amount})
+    $color-l: null
+    // if pass css var
+    @if type-of($amount) == 'string'
+      $color-l: $amount
+    @else if unit($amount) == '%'
+      $color-l: calc(var(--#{$color}-l) - #{$amount})
+    @else
+      @error ('Not supported unit "#{$name}" for alpha!')
     @return hsla(var(--#{$color}-h), var(--#{$color}-s), #{$color-l}, var(--#{$color}-a))
   @return $color
 
@@ -144,7 +151,14 @@
 
 @function bulmaCSSVarLighten($color, $amount)
   @if type-of($color) == 'string' and map-has-key($colors, $color)
-    $color-l: calc(var(--#{$color}-l) + #{$amount})
+    $color-l: null
+    // if pass css var
+    @if type-of($amount) == 'string'
+      $color-l: $amount
+    @else if unit($amount) == '%'
+      $color-l: calc(var(--#{$color}-l) + #{$amount})
+    @else
+      @error ('Not supported unit "#{$name}" for alpha!')
     @return hsla(var(--#{$color}-h), var(--#{$color}-s), #{$color-l}, var(--#{$color}-a))
   @return $color
 
