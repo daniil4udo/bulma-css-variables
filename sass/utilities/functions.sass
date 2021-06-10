@@ -181,6 +181,10 @@
     @each $name, $value in $list
       --#{$name}: #{$value}
 
+=registerDynamicScopeCssVar($selector, $css-vars-map: $css-vars-map, $at-root: $at-root)
+  .#{$selector}, [class^="#{$selector}-"]
+    +registerCSSVars($css-vars-map, $at-root)
+
 =registerCSSVarColor($name, $components, $prefix: '')
   $color: nth($components, 1)
   $base: $prefix + $name

@@ -1,10 +1,3 @@
-$css-vars-map: ('checkbox-radio-hover-color': ($input-hover-color),'checkbox-radio-disabled-color': ($input-disabled-color))
-// --checkbox-radio-hover-color: #{$input-hover-color}
-// --checkbox-radio-disabled-color: #{$input-disabled-color}
-
-.checkbox, [class^="checkbox-"], .radio, [class^="radio-"]
-  +registerCSSVars($css-vars-map, $at-root)
-
 %checkbox-radio
   cursor: pointer
   display: inline-block
@@ -13,11 +6,11 @@ $css-vars-map: ('checkbox-radio-hover-color': ($input-hover-color),'checkbox-rad
   input
     cursor: pointer
   &:hover
-    color: var(--checkbox-radio-hover-color)
+    color: var(--input-hover-color, #{$input-hover-color})
   &[disabled],
   fieldset[disabled] &,
   input[disabled]
-    color: var(--checkbox-radio-disabled-color)
+    color: var(--input-disabled-color, #{$input-disabled-color})
     cursor: not-allowed
 
 .checkbox

@@ -1,5 +1,9 @@
 @import "../utilities/mixins"
 
+$number-background: var(--background, #{$background}) !default
+$number-radius-rounded: var(--radius-rounded, #{$radius-rounded}) !default
+$number-font-size: var(--size-medium, #{$size-medium}) !default
+
 .block
   @extend %block
 
@@ -16,10 +20,13 @@
 .loader
   @extend %loader
 
-\:root
-  --number-background: var(--background, #{$background})
-  --number-radius-rounded: var(--radius-rounded, #{$radius-rounded})
-  --number-font-size: var(--size-medium, #{$size-medium})
+$css-vars-map: ('number-background': ($number-background),'number-radius-rounded': ($number-radius-rounded),'number-font-size': ($number-font-size))
+// --number-background: var(--background, #{$background})
+// --number-radius-rounded: var(--radius-rounded, #{$radius-rounded})
+// --number-font-size: var(--size-medium, #{$size-medium})
+
+.number, [class^="number-"]
+  +registerCSSVars($css-vars-map, $at-root)
 
 .number
   align-items: center

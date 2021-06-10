@@ -32,7 +32,6 @@ $css-vars-map: ('file-border-color': ($file-border-color),'file-radius': ($file-
   @extend %unselectable
   align-items: stretch
   display: flex
-  font-size: var(--file-font-size)
   justify-content: flex-start
   position: relative
   // Colors
@@ -72,16 +71,16 @@ $css-vars-map: ('file-border-color': ($file-border-color),'file-radius': ($file-
           color: var(--#{$name}-invert, #{$color-invert})
   // Sizes
   &.is-small
-    --file-font-size: var(--size-small, #{$size-small})
+    font-size: var(--size-small, #{$size-small})
   &.is-normal
-    --file-font-size: var(--size-normal, #{$size-normal})
+    font-size: var(--size-normal, #{$size-normal})
   &.is-medium
-    --file-font-size: var(--size-medium, #{$size-medium})
+    font-size: var(--size-medium, #{$size-medium})
     .file-icon
       .fa
         font-size: 21px
   &.is-large
-    --file-font-size: var(--size-large, #{$size-large})
+    font-size: var(--size-large, #{$size-large})
     .file-icon
       .fa
         font-size: 28px

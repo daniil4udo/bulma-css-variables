@@ -16,7 +16,7 @@ $css-vars-map: ('select-arrow': ($input-arrow),'select-disabled-border-color': (
   position: relative
   vertical-align: top
   &:not(.is-multiple)
-    height: var(--input-height)
+    height: var(--input-height, #{$input-height})
   &:not(.is-multiple):not(.is-loading)
     &::after
       @extend %arrow
