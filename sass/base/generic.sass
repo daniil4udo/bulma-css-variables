@@ -31,38 +31,41 @@ $pre-font-size: 0.875em !default
 $pre-padding: 1.25rem 1.5rem !default
 $pre-code-font-size: 1em !default
 
+$css-vars-map: ('body-background-color': ($body-background-color),'body-size': ($body-size),'body-min-width': ($body-min-width),'body-rendering': ($body-rendering),'body-family': ($body-family),'body-overflow-x': ($body-overflow-x),'body-overflow-y': ($body-overflow-y),'body-color': ($body-color),'body-font-size': ($body-font-size),'body-weight': ($body-weight),'body-line-height': ($body-line-height),'code-family': ($code-family),'code-padding': ($code-padding),'code-weight': ($code-weight),'code-size': ($code-size),'small-font-size': ($small-font-size),'hr-background-color': ($hr-background-color),'hr-height': ($hr-height),'hr-margin': ($hr-margin),'strong-color': ($strong-color),'strong-weight': ($strong-weight),'pre-font-size': ($pre-font-size),'pre-padding': ($pre-padding),'pre-code-font-size': ($pre-code-font-size))
+// --body-background-color: #{$body-background-color}
+// --body-size: #{$body-size}
+// --body-min-width: #{$body-min-width}
+// --body-overflow-x: #{$body-overflow-x}
+// --body-overflow-y: #{$body-overflow-y}
+// --body-rendering: #{$body-rendering}
+// --body-family: #{$body-family}
+// --code-family: #{$code-family}
+// --body-color: #{$body-color}
+// --body-font-size: #{$body-font-size}
+// --body-weight: #{$body-weight}
+// --body-line-height: #{$body-line-height}
+// --link: #{$link}
+// --link-hover: #{$link-hover}
+// --code-background: #{$code-background}
+// --code: #{$code}
+// --code-size: #{$code-size}
+// --code-weight: #{$code-weight}
+// --code-padding: #{$code-padding}
+// --hr-background-color: #{$hr-background-color}
+// --hr-height: #{$hr-height}
+// --hr-margin: #{$hr-margin}
+// --small-font-size: #{$small-font-size}
+// --strong-color: #{$strong-color}
+// --strong-weight: #{$strong-weight}
+// --pre-background: #{$pre-background}
+// --pre: #{$pre}
+// --pre-font-size: #{$pre-font-size}
+// --pre-padding: #{$pre-padding}
+// --pre-code-font-size: #{$pre-code-font-size}
+// --text-strong: #{$text-strong}
+
 html
-  --body-background-color: #{$body-background-color}
-  --body-size: #{$body-size}
-  --body-min-width: #{$body-min-width}
-  --body-overflow-x: #{$body-overflow-x}
-  --body-overflow-y: #{$body-overflow-y}
-  --body-rendering: #{$body-rendering}
-  --body-family: #{$body-family}
-  --code-family: #{$code-family}
-  --body-color: #{$body-color}
-  --body-font-size: #{$body-font-size}
-  --body-weight: #{$body-weight}
-  --body-line-height: #{$body-line-height}
-  --link: #{$link}
-  --link-hover: #{$link-hover}
-  --code-background: #{$code-background}
-  --code: #{$code}
-  --code-size: #{$code-size}
-  --code-weight: #{$code-weight}
-  --code-padding: #{$code-padding}
-  --hr-background-color: #{$hr-background-color}
-  --hr-height: #{$hr-height}
-  --hr-margin: #{$hr-margin}
-  --small-font-size: #{$small-font-size}
-  --strong-color: #{$strong-color}
-  --strong-weight: #{$strong-weight}
-  --pre-background: #{$pre-background}
-  --pre: #{$pre}
-  --pre-font-size: #{$pre-font-size}
-  --pre-padding: #{$pre-padding}
-  --pre-code-font-size: #{$pre-code-font-size}
-  --text-strong: #{$text-strong}
+  +registerCSSVars($css-vars-map, $at-root)
   background-color: var(--body-background-color)
   font-size: var(--body-size)
   -moz-osx-font-smoothing: grayscale

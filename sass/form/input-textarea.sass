@@ -50,10 +50,13 @@ $textarea-colors: $form-colors !default
     padding-left: 0
     padding-right: 0
 
-\:root
-  --textarea-padding: #{$textarea-padding}
-  --textarea-max-height: #{$textarea-max-height}
-  --textarea-min-height: #{$textarea-min-height}
+$css-vars-map: ('textarea-padding': ($textarea-padding),'textarea-max-height': ($textarea-max-height),'textarea-min-height': ($textarea-min-height))
+// --textarea-padding: #{$textarea-padding}
+// --textarea-max-height: #{$textarea-max-height}
+// --textarea-min-height: #{$textarea-min-height}
+
+.textarea, [class^="textarea-"]
+  +registerCSSVars($css-vars-map, $at-root)
 
 .textarea
   @extend %input-textarea
