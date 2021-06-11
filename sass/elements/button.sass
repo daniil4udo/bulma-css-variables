@@ -48,10 +48,9 @@ $button-colors: $colors !default
 
 // The button sizes use mixins so they can be used at different breakpoints
 =button-small
+  --button-font-size: var(--size-small, #{$size-small})
   &:not(.is-rounded)
     border-radius: var(--radius-small, #{$radius-small})
-    --button-font-size: var(--size-small, #{$size-small})
-  font-size: $size-small
 =button-normal
   --button-font-size: var(--size-normal, #{$size-normal})
 =button-medium

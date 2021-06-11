@@ -67,7 +67,7 @@ $css-vars-map: ('hero-body-padding': ($hero-body-padding),'hero-body-padding-tab
             opacity: 1
         li
           &.is-active a
-            color: $color !important
+            color: var(--#{$name}, #{$color}) !important
             opacity: 1
         &.is-boxed,
         &.is-toggle
