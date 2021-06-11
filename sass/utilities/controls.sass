@@ -13,8 +13,9 @@ $control-padding-horizontal: calc(0.75em - #{var(--control-border-width, #{$cont
 
 $css-vars-map: ('control-radius': ($control-radius),'control-radius-small': ($control-radius-small),'control-border-width': ($control-border-width),'control-height': ($control-height),'control-line-height': ($control-line-height),'control-padding-vertical': ($control-padding-vertical),'control-padding-horizontal': ($control-padding-horizontal))
 
-.control, [class^="control-"]
-  +registerCSSVars($css-vars-map, $at-root)
+// controls is kinda abstract
+// always register in the root
++registerCSSVars($css-vars-map, true)
 
 =control
   -moz-appearance: none
