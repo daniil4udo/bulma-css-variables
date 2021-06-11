@@ -54,14 +54,7 @@
   +registerCSSVarColors($colors)
   +registerCSSVarColors($shades)
   // Controls
-  --control-font-size: #{$control-font-size}
-  --control-radius: #{$control-radius}
-  --control-radius-small: #{$control-radius-small}
-  --control-border-width: #{$control-border-width}
-  --control-height: #{$control-height}
-  --control-line-height: #{$control-line-height}
-  --control-padding-vertical: #{$control-padding-vertical}
-  --control-padding-horizontal: #{$control-padding-horizontal}
+  +registerCSSVars($css-vars-map, true)
   // Inputs
   --input-color: #{$input-color}
   --input-background-color: #{$input-background-color}

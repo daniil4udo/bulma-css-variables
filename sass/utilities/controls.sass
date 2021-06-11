@@ -11,11 +11,10 @@ $control-line-height: 1.5 !default
 $control-padding-vertical: calc(0.5em - #{var(--control-border-width, #{$control-border-width})}) !default
 $control-padding-horizontal: calc(0.75em - #{var(--control-border-width, #{$control-border-width})}) !default
 
-$css-vars-map: ('control-radius': ($control-radius),'control-radius-small': ($control-radius-small),'control-border-width': ($control-border-width),'control-height': ($control-height),'control-line-height': ($control-line-height),'control-padding-vertical': ($control-padding-vertical),'control-padding-horizontal': ($control-padding-horizontal))
-
-// controls is kinda abstract
-// always register in the root
-+registerCSSVars($css-vars-map, true)
+// uniq name in that case
+// to register it once
+// in the basic theme
+$css-vars-control: ('control-radius': ($control-radius),'control-radius-small': ($control-radius-small),'control-border-width': ($control-border-width),'control-height': ($control-height),'control-line-height': ($control-line-height),'control-padding-vertical': ($control-padding-vertical),'control-padding-horizontal': ($control-padding-horizontal)) !default
 
 =control
   -moz-appearance: none
