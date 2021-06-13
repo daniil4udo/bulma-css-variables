@@ -1211,12 +1211,8 @@ fieldset[disabled] .button.is-primary.is-inverted.is-outlined {
 }
 
 .button.is-primary.is-light {
-  --hover-background-l-delta: -2.5%;
-  --hover-background-primary-l: calc(var(--primary-light-l) + var(--hover-background-l-delta));
-  --hover-background-color: hsla(var(--primary-h), var(--primary-s), var(--hover-background-primary-l), var(--primary-a));
-  --active-background-l-delta: -5%;
-  --active-background-primary-l: calc(var(--primary-light-l) + var(--active-background-l-delta));
-  --active-background-color: hsla(var(--primary-h), var(--primary-s), var(--active-background-primary-l), var(--primary-a));
+  --hover-background-color: hsla(var(--primary-h), var(--primary-s), calc(var(--primary-light-l) - 2.5%), var(--primary-a));
+  --active-background-color: hsla(var(--primary-h), var(--primary-s), calc(var(--primary-light-l) - 5%), var(--primary-a));
   background-color: var(--primary-light, #ebfffc);
   color: var(--primary-dark, #00947e);
 }
@@ -1343,12 +1339,8 @@ fieldset[disabled] .button.is-link.is-inverted.is-outlined {
 }
 
 .button.is-link.is-light {
-  --hover-background-l-delta: -2.5%;
-  --hover-background-link-l: calc(var(--link-light-l) + var(--hover-background-l-delta));
-  --hover-background-color: hsla(var(--link-h), var(--link-s), var(--hover-background-link-l), var(--link-a));
-  --active-background-l-delta: -5%;
-  --active-background-link-l: calc(var(--link-light-l) + var(--active-background-l-delta));
-  --active-background-color: hsla(var(--link-h), var(--link-s), var(--active-background-link-l), var(--link-a));
+  --hover-background-color: hsla(var(--link-h), var(--link-s), calc(var(--link-light-l) - 2.5%), var(--link-a));
+  --active-background-color: hsla(var(--link-h), var(--link-s), calc(var(--link-light-l) - 5%), var(--link-a));
   background-color: var(--link-light, #eff1fa);
   color: var(--link-dark, #3850b7);
 }
@@ -1475,12 +1467,8 @@ fieldset[disabled] .button.is-info.is-inverted.is-outlined {
 }
 
 .button.is-info.is-light {
-  --hover-background-l-delta: -2.5%;
-  --hover-background-info-l: calc(var(--info-light-l) + var(--hover-background-l-delta));
-  --hover-background-color: hsla(var(--info-h), var(--info-s), var(--hover-background-info-l), var(--info-a));
-  --active-background-l-delta: -5%;
-  --active-background-info-l: calc(var(--info-light-l) + var(--active-background-l-delta));
-  --active-background-color: hsla(var(--info-h), var(--info-s), var(--active-background-info-l), var(--info-a));
+  --hover-background-color: hsla(var(--info-h), var(--info-s), calc(var(--info-light-l) - 2.5%), var(--info-a));
+  --active-background-color: hsla(var(--info-h), var(--info-s), calc(var(--info-light-l) - 5%), var(--info-a));
   background-color: var(--info-light, #eff5fb);
   color: var(--info-dark, #296fa8);
 }
@@ -1607,12 +1595,8 @@ fieldset[disabled] .button.is-success.is-inverted.is-outlined {
 }
 
 .button.is-success.is-light {
-  --hover-background-l-delta: -2.5%;
-  --hover-background-success-l: calc(var(--success-light-l) + var(--hover-background-l-delta));
-  --hover-background-color: hsla(var(--success-h), var(--success-s), var(--hover-background-success-l), var(--success-a));
-  --active-background-l-delta: -5%;
-  --active-background-success-l: calc(var(--success-light-l) + var(--active-background-l-delta));
-  --active-background-color: hsla(var(--success-h), var(--success-s), var(--active-background-success-l), var(--success-a));
+  --hover-background-color: hsla(var(--success-h), var(--success-s), calc(var(--success-light-l) - 2.5%), var(--success-a));
+  --active-background-color: hsla(var(--success-h), var(--success-s), calc(var(--success-light-l) - 5%), var(--success-a));
   background-color: var(--success-light, #effaf5);
   color: var(--success-dark, #257953);
 }
@@ -1739,12 +1723,8 @@ fieldset[disabled] .button.is-warning.is-inverted.is-outlined {
 }
 
 .button.is-warning.is-light {
-  --hover-background-l-delta: -2.5%;
-  --hover-background-warning-l: calc(var(--warning-light-l) + var(--hover-background-l-delta));
-  --hover-background-color: hsla(var(--warning-h), var(--warning-s), var(--hover-background-warning-l), var(--warning-a));
-  --active-background-l-delta: -5%;
-  --active-background-warning-l: calc(var(--warning-light-l) + var(--active-background-l-delta));
-  --active-background-color: hsla(var(--warning-h), var(--warning-s), var(--active-background-warning-l), var(--warning-a));
+  --hover-background-color: hsla(var(--warning-h), var(--warning-s), calc(var(--warning-light-l) - 2.5%), var(--warning-a));
+  --active-background-color: hsla(var(--warning-h), var(--warning-s), calc(var(--warning-light-l) - 5%), var(--warning-a));
   background-color: var(--warning-light, #fffaeb);
   color: var(--warning-dark, #946c00);
 }
@@ -1871,12 +1851,8 @@ fieldset[disabled] .button.is-danger.is-inverted.is-outlined {
 }
 
 .button.is-danger.is-light {
-  --hover-background-l-delta: -2.5%;
-  --hover-background-danger-l: calc(var(--danger-light-l) + var(--hover-background-l-delta));
-  --hover-background-color: hsla(var(--danger-h), var(--danger-s), var(--hover-background-danger-l), var(--danger-a));
-  --active-background-l-delta: -5%;
-  --active-background-danger-l: calc(var(--danger-light-l) + var(--active-background-l-delta));
-  --active-background-color: hsla(var(--danger-h), var(--danger-s), var(--active-background-danger-l), var(--danger-a));
+  --hover-background-color: hsla(var(--danger-h), var(--danger-s), calc(var(--danger-light-l) - 2.5%), var(--danger-a));
+  --active-background-color: hsla(var(--danger-h), var(--danger-s), calc(var(--danger-light-l) - 5%), var(--danger-a));
   background-color: var(--danger-light, #feecf0);
   color: var(--danger-dark, #cc0f35);
 }
@@ -4146,14 +4122,10 @@ fieldset[disabled] .select select:hover {
 }
 
 .file.is-white {
-  --hover-background-l-delta: -2.5%;
-  --hover-background-white-l: calc(var(--white-light-l) + var(--hover-background-l-delta));
-  --hover-background-color: hsla(var(--white-h), var(--white-s), var(--hover-background-white-l), var(--white-a));
+  --hover-background-color: hsla(var(--white-h), var(--white-s), calc(var(--white-light-l) - 2.5%), var(--white-a));
   --focus-box-shadow-color-hsla: hsla(var(--white-h), var(--white-s), var(--white-l), 0.25);
   --focus-box-shadow-color: var(--focus-box-shadow-color-hsla, rgba(255, 255, 255, 0.25));
-  --active-background-l-delta: -5%;
-  --active-background-white-l: calc(var(--white-light-l) + var(--active-background-l-delta));
-  --active-background-color: hsla(var(--white-h), var(--white-s), var(--active-background-white-l), var(--white-a));
+  --active-background-color: hsla(var(--white-h), var(--white-s), calc(var(--white-light-l) - 5%), var(--white-a));
 }
 
 .file.is-white .file-cta {
@@ -4181,14 +4153,10 @@ fieldset[disabled] .select select:hover {
 }
 
 .file.is-black {
-  --hover-background-l-delta: -2.5%;
-  --hover-background-black-l: calc(var(--black-light-l) + var(--hover-background-l-delta));
-  --hover-background-color: hsla(var(--black-h), var(--black-s), var(--hover-background-black-l), var(--black-a));
+  --hover-background-color: hsla(var(--black-h), var(--black-s), calc(var(--black-light-l) - 2.5%), var(--black-a));
   --focus-box-shadow-color-hsla: hsla(var(--black-h), var(--black-s), var(--black-l), 0.25);
   --focus-box-shadow-color: var(--focus-box-shadow-color-hsla, rgba(10, 10, 10, 0.25));
-  --active-background-l-delta: -5%;
-  --active-background-black-l: calc(var(--black-light-l) + var(--active-background-l-delta));
-  --active-background-color: hsla(var(--black-h), var(--black-s), var(--active-background-black-l), var(--black-a));
+  --active-background-color: hsla(var(--black-h), var(--black-s), calc(var(--black-light-l) - 5%), var(--black-a));
 }
 
 .file.is-black .file-cta {
@@ -4216,14 +4184,10 @@ fieldset[disabled] .select select:hover {
 }
 
 .file.is-light {
-  --hover-background-l-delta: -2.5%;
-  --hover-background-light-l: calc(var(--light-light-l) + var(--hover-background-l-delta));
-  --hover-background-color: hsla(var(--light-h), var(--light-s), var(--hover-background-light-l), var(--light-a));
+  --hover-background-color: hsla(var(--light-h), var(--light-s), calc(var(--light-light-l) - 2.5%), var(--light-a));
   --focus-box-shadow-color-hsla: hsla(var(--light-h), var(--light-s), var(--light-l), 0.25);
   --focus-box-shadow-color: var(--focus-box-shadow-color-hsla, rgba(245, 245, 245, 0.25));
-  --active-background-l-delta: -5%;
-  --active-background-light-l: calc(var(--light-light-l) + var(--active-background-l-delta));
-  --active-background-color: hsla(var(--light-h), var(--light-s), var(--active-background-light-l), var(--light-a));
+  --active-background-color: hsla(var(--light-h), var(--light-s), calc(var(--light-light-l) - 5%), var(--light-a));
 }
 
 .file.is-light .file-cta {
@@ -4251,14 +4215,10 @@ fieldset[disabled] .select select:hover {
 }
 
 .file.is-dark {
-  --hover-background-l-delta: -2.5%;
-  --hover-background-dark-l: calc(var(--dark-light-l) + var(--hover-background-l-delta));
-  --hover-background-color: hsla(var(--dark-h), var(--dark-s), var(--hover-background-dark-l), var(--dark-a));
+  --hover-background-color: hsla(var(--dark-h), var(--dark-s), calc(var(--dark-light-l) - 2.5%), var(--dark-a));
   --focus-box-shadow-color-hsla: hsla(var(--dark-h), var(--dark-s), var(--dark-l), 0.25);
   --focus-box-shadow-color: var(--focus-box-shadow-color-hsla, rgba(54, 54, 54, 0.25));
-  --active-background-l-delta: -5%;
-  --active-background-dark-l: calc(var(--dark-light-l) + var(--active-background-l-delta));
-  --active-background-color: hsla(var(--dark-h), var(--dark-s), var(--active-background-dark-l), var(--dark-a));
+  --active-background-color: hsla(var(--dark-h), var(--dark-s), calc(var(--dark-light-l) - 5%), var(--dark-a));
 }
 
 .file.is-dark .file-cta {
@@ -4286,14 +4246,10 @@ fieldset[disabled] .select select:hover {
 }
 
 .file.is-primary {
-  --hover-background-l-delta: -2.5%;
-  --hover-background-primary-l: calc(var(--primary-light-l) + var(--hover-background-l-delta));
-  --hover-background-color: hsla(var(--primary-h), var(--primary-s), var(--hover-background-primary-l), var(--primary-a));
+  --hover-background-color: hsla(var(--primary-h), var(--primary-s), calc(var(--primary-light-l) - 2.5%), var(--primary-a));
   --focus-box-shadow-color-hsla: hsla(var(--primary-h), var(--primary-s), var(--primary-l), 0.25);
   --focus-box-shadow-color: var(--focus-box-shadow-color-hsla, rgba(0, 209, 178, 0.25));
-  --active-background-l-delta: -5%;
-  --active-background-primary-l: calc(var(--primary-light-l) + var(--active-background-l-delta));
-  --active-background-color: hsla(var(--primary-h), var(--primary-s), var(--active-background-primary-l), var(--primary-a));
+  --active-background-color: hsla(var(--primary-h), var(--primary-s), calc(var(--primary-light-l) - 5%), var(--primary-a));
 }
 
 .file.is-primary .file-cta {
@@ -4321,14 +4277,10 @@ fieldset[disabled] .select select:hover {
 }
 
 .file.is-link {
-  --hover-background-l-delta: -2.5%;
-  --hover-background-link-l: calc(var(--link-light-l) + var(--hover-background-l-delta));
-  --hover-background-color: hsla(var(--link-h), var(--link-s), var(--hover-background-link-l), var(--link-a));
+  --hover-background-color: hsla(var(--link-h), var(--link-s), calc(var(--link-light-l) - 2.5%), var(--link-a));
   --focus-box-shadow-color-hsla: hsla(var(--link-h), var(--link-s), var(--link-l), 0.25);
   --focus-box-shadow-color: var(--focus-box-shadow-color-hsla, rgba(72, 95, 199, 0.25));
-  --active-background-l-delta: -5%;
-  --active-background-link-l: calc(var(--link-light-l) + var(--active-background-l-delta));
-  --active-background-color: hsla(var(--link-h), var(--link-s), var(--active-background-link-l), var(--link-a));
+  --active-background-color: hsla(var(--link-h), var(--link-s), calc(var(--link-light-l) - 5%), var(--link-a));
 }
 
 .file.is-link .file-cta {
@@ -4356,14 +4308,10 @@ fieldset[disabled] .select select:hover {
 }
 
 .file.is-info {
-  --hover-background-l-delta: -2.5%;
-  --hover-background-info-l: calc(var(--info-light-l) + var(--hover-background-l-delta));
-  --hover-background-color: hsla(var(--info-h), var(--info-s), var(--hover-background-info-l), var(--info-a));
+  --hover-background-color: hsla(var(--info-h), var(--info-s), calc(var(--info-light-l) - 2.5%), var(--info-a));
   --focus-box-shadow-color-hsla: hsla(var(--info-h), var(--info-s), var(--info-l), 0.25);
   --focus-box-shadow-color: var(--focus-box-shadow-color-hsla, rgba(62, 142, 208, 0.25));
-  --active-background-l-delta: -5%;
-  --active-background-info-l: calc(var(--info-light-l) + var(--active-background-l-delta));
-  --active-background-color: hsla(var(--info-h), var(--info-s), var(--active-background-info-l), var(--info-a));
+  --active-background-color: hsla(var(--info-h), var(--info-s), calc(var(--info-light-l) - 5%), var(--info-a));
 }
 
 .file.is-info .file-cta {
@@ -4391,14 +4339,10 @@ fieldset[disabled] .select select:hover {
 }
 
 .file.is-success {
-  --hover-background-l-delta: -2.5%;
-  --hover-background-success-l: calc(var(--success-light-l) + var(--hover-background-l-delta));
-  --hover-background-color: hsla(var(--success-h), var(--success-s), var(--hover-background-success-l), var(--success-a));
+  --hover-background-color: hsla(var(--success-h), var(--success-s), calc(var(--success-light-l) - 2.5%), var(--success-a));
   --focus-box-shadow-color-hsla: hsla(var(--success-h), var(--success-s), var(--success-l), 0.25);
   --focus-box-shadow-color: var(--focus-box-shadow-color-hsla, rgba(72, 199, 142, 0.25));
-  --active-background-l-delta: -5%;
-  --active-background-success-l: calc(var(--success-light-l) + var(--active-background-l-delta));
-  --active-background-color: hsla(var(--success-h), var(--success-s), var(--active-background-success-l), var(--success-a));
+  --active-background-color: hsla(var(--success-h), var(--success-s), calc(var(--success-light-l) - 5%), var(--success-a));
 }
 
 .file.is-success .file-cta {
@@ -4426,14 +4370,10 @@ fieldset[disabled] .select select:hover {
 }
 
 .file.is-warning {
-  --hover-background-l-delta: -2.5%;
-  --hover-background-warning-l: calc(var(--warning-light-l) + var(--hover-background-l-delta));
-  --hover-background-color: hsla(var(--warning-h), var(--warning-s), var(--hover-background-warning-l), var(--warning-a));
+  --hover-background-color: hsla(var(--warning-h), var(--warning-s), calc(var(--warning-light-l) - 2.5%), var(--warning-a));
   --focus-box-shadow-color-hsla: hsla(var(--warning-h), var(--warning-s), var(--warning-l), 0.25);
   --focus-box-shadow-color: var(--focus-box-shadow-color-hsla, rgba(255, 224, 138, 0.25));
-  --active-background-l-delta: -5%;
-  --active-background-warning-l: calc(var(--warning-light-l) + var(--active-background-l-delta));
-  --active-background-color: hsla(var(--warning-h), var(--warning-s), var(--active-background-warning-l), var(--warning-a));
+  --active-background-color: hsla(var(--warning-h), var(--warning-s), calc(var(--warning-light-l) - 5%), var(--warning-a));
 }
 
 .file.is-warning .file-cta {
@@ -4461,14 +4401,10 @@ fieldset[disabled] .select select:hover {
 }
 
 .file.is-danger {
-  --hover-background-l-delta: -2.5%;
-  --hover-background-danger-l: calc(var(--danger-light-l) + var(--hover-background-l-delta));
-  --hover-background-color: hsla(var(--danger-h), var(--danger-s), var(--hover-background-danger-l), var(--danger-a));
+  --hover-background-color: hsla(var(--danger-h), var(--danger-s), calc(var(--danger-light-l) - 2.5%), var(--danger-a));
   --focus-box-shadow-color-hsla: hsla(var(--danger-h), var(--danger-s), var(--danger-l), 0.25);
   --focus-box-shadow-color: var(--focus-box-shadow-color-hsla, rgba(241, 70, 104, 0.25));
-  --active-background-l-delta: -5%;
-  --active-background-danger-l: calc(var(--danger-light-l) + var(--active-background-l-delta));
-  --active-background-color: hsla(var(--danger-h), var(--danger-s), var(--active-background-danger-l), var(--danger-a));
+  --active-background-color: hsla(var(--danger-h), var(--danger-s), calc(var(--danger-light-l) - 5%), var(--danger-a));
 }
 
 .file.is-danger .file-cta {
@@ -9832,9 +9768,7 @@ a.has-text-primary:hover, a.has-text-primary:focus {
 }
 
 .has-text-primary-light {
-  --has-text-light-hover-delta: -10%;
-  --has-text-light-hover-primary-l: calc(var(--primary-light-l) + var(--has-text-light-hover-delta));
-  --has-text-light-hover-color: hsla(var(--primary-h), var(--primary-s), var(--has-text-light-hover-primary-l), var(--primary-a));
+  --has-text-light-hover-color: hsla(var(--primary-h), var(--primary-s), calc(var(--primary-light-l) - 10%), var(--primary-a));
   color: var(--primary-light, #ebfffc) !important;
 }
 
@@ -9847,9 +9781,7 @@ a.has-text-primary-light:hover, a.has-text-primary-light:focus {
 }
 
 .has-text-primary-dark {
-  --has-text-dark-hover-delta: 10%;
-  --has-text-dark-hover-primary-l: calc(var(--primary-dark-l) + var(--has-text-dark-hover-delta));
-  --has-text-dark-hover-color: hsla(var(--primary-h), var(--primary-s), var(--has-text-dark-hover-primary-l), var(--primary-a));
+  --has-text-dark-hover-color: hsla(var(--primary-h), var(--primary-s), calc(var(--primary-light-l) + 10%), var(--primary-a));
   color: var(--primary-dark, #00947e) !important;
 }
 
@@ -9875,9 +9807,7 @@ a.has-text-link:hover, a.has-text-link:focus {
 }
 
 .has-text-link-light {
-  --has-text-light-hover-delta: -10%;
-  --has-text-light-hover-link-l: calc(var(--link-light-l) + var(--has-text-light-hover-delta));
-  --has-text-light-hover-color: hsla(var(--link-h), var(--link-s), var(--has-text-light-hover-link-l), var(--link-a));
+  --has-text-light-hover-color: hsla(var(--link-h), var(--link-s), calc(var(--link-light-l) - 10%), var(--link-a));
   color: var(--link-light, #eff1fa) !important;
 }
 
@@ -9890,9 +9820,7 @@ a.has-text-link-light:hover, a.has-text-link-light:focus {
 }
 
 .has-text-link-dark {
-  --has-text-dark-hover-delta: 10%;
-  --has-text-dark-hover-link-l: calc(var(--link-dark-l) + var(--has-text-dark-hover-delta));
-  --has-text-dark-hover-color: hsla(var(--link-h), var(--link-s), var(--has-text-dark-hover-link-l), var(--link-a));
+  --has-text-dark-hover-color: hsla(var(--link-h), var(--link-s), calc(var(--link-light-l) + 10%), var(--link-a));
   color: var(--link-dark, #3850b7) !important;
 }
 
@@ -9918,9 +9846,7 @@ a.has-text-info:hover, a.has-text-info:focus {
 }
 
 .has-text-info-light {
-  --has-text-light-hover-delta: -10%;
-  --has-text-light-hover-info-l: calc(var(--info-light-l) + var(--has-text-light-hover-delta));
-  --has-text-light-hover-color: hsla(var(--info-h), var(--info-s), var(--has-text-light-hover-info-l), var(--info-a));
+  --has-text-light-hover-color: hsla(var(--info-h), var(--info-s), calc(var(--info-light-l) - 10%), var(--info-a));
   color: var(--info-light, #eff5fb) !important;
 }
 
@@ -9933,9 +9859,7 @@ a.has-text-info-light:hover, a.has-text-info-light:focus {
 }
 
 .has-text-info-dark {
-  --has-text-dark-hover-delta: 10%;
-  --has-text-dark-hover-info-l: calc(var(--info-dark-l) + var(--has-text-dark-hover-delta));
-  --has-text-dark-hover-color: hsla(var(--info-h), var(--info-s), var(--has-text-dark-hover-info-l), var(--info-a));
+  --has-text-dark-hover-color: hsla(var(--info-h), var(--info-s), calc(var(--info-light-l) + 10%), var(--info-a));
   color: var(--info-dark, #296fa8) !important;
 }
 
@@ -9961,9 +9885,7 @@ a.has-text-success:hover, a.has-text-success:focus {
 }
 
 .has-text-success-light {
-  --has-text-light-hover-delta: -10%;
-  --has-text-light-hover-success-l: calc(var(--success-light-l) + var(--has-text-light-hover-delta));
-  --has-text-light-hover-color: hsla(var(--success-h), var(--success-s), var(--has-text-light-hover-success-l), var(--success-a));
+  --has-text-light-hover-color: hsla(var(--success-h), var(--success-s), calc(var(--success-light-l) - 10%), var(--success-a));
   color: var(--success-light, #effaf5) !important;
 }
 
@@ -9976,9 +9898,7 @@ a.has-text-success-light:hover, a.has-text-success-light:focus {
 }
 
 .has-text-success-dark {
-  --has-text-dark-hover-delta: 10%;
-  --has-text-dark-hover-success-l: calc(var(--success-dark-l) + var(--has-text-dark-hover-delta));
-  --has-text-dark-hover-color: hsla(var(--success-h), var(--success-s), var(--has-text-dark-hover-success-l), var(--success-a));
+  --has-text-dark-hover-color: hsla(var(--success-h), var(--success-s), calc(var(--success-light-l) + 10%), var(--success-a));
   color: var(--success-dark, #257953) !important;
 }
 
@@ -10004,9 +9924,7 @@ a.has-text-warning:hover, a.has-text-warning:focus {
 }
 
 .has-text-warning-light {
-  --has-text-light-hover-delta: -10%;
-  --has-text-light-hover-warning-l: calc(var(--warning-light-l) + var(--has-text-light-hover-delta));
-  --has-text-light-hover-color: hsla(var(--warning-h), var(--warning-s), var(--has-text-light-hover-warning-l), var(--warning-a));
+  --has-text-light-hover-color: hsla(var(--warning-h), var(--warning-s), calc(var(--warning-light-l) - 10%), var(--warning-a));
   color: var(--warning-light, #fffaeb) !important;
 }
 
@@ -10019,9 +9937,7 @@ a.has-text-warning-light:hover, a.has-text-warning-light:focus {
 }
 
 .has-text-warning-dark {
-  --has-text-dark-hover-delta: 10%;
-  --has-text-dark-hover-warning-l: calc(var(--warning-dark-l) + var(--has-text-dark-hover-delta));
-  --has-text-dark-hover-color: hsla(var(--warning-h), var(--warning-s), var(--has-text-dark-hover-warning-l), var(--warning-a));
+  --has-text-dark-hover-color: hsla(var(--warning-h), var(--warning-s), calc(var(--warning-light-l) + 10%), var(--warning-a));
   color: var(--warning-dark, #946c00) !important;
 }
 
@@ -10047,9 +9963,7 @@ a.has-text-danger:hover, a.has-text-danger:focus {
 }
 
 .has-text-danger-light {
-  --has-text-light-hover-delta: -10%;
-  --has-text-light-hover-danger-l: calc(var(--danger-light-l) + var(--has-text-light-hover-delta));
-  --has-text-light-hover-color: hsla(var(--danger-h), var(--danger-s), var(--has-text-light-hover-danger-l), var(--danger-a));
+  --has-text-light-hover-color: hsla(var(--danger-h), var(--danger-s), calc(var(--danger-light-l) - 10%), var(--danger-a));
   color: var(--danger-light, #feecf0) !important;
 }
 
@@ -10062,9 +9976,7 @@ a.has-text-danger-light:hover, a.has-text-danger-light:focus {
 }
 
 .has-text-danger-dark {
-  --has-text-dark-hover-delta: 10%;
-  --has-text-dark-hover-danger-l: calc(var(--danger-dark-l) + var(--has-text-dark-hover-delta));
-  --has-text-dark-hover-color: hsla(var(--danger-h), var(--danger-s), var(--has-text-dark-hover-danger-l), var(--danger-a));
+  --has-text-dark-hover-color: hsla(var(--danger-h), var(--danger-s), calc(var(--danger-light-l) + 10%), var(--danger-a));
   color: var(--danger-dark, #cc0f35) !important;
 }
 
@@ -12778,8 +12690,8 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   --white-l: 100%;
   --white-a: 1;
   --white: hsla(var(--white-h), var(--white-s), var(--white-l), var(--white-a));
-  --white-invert-l: 0%;
-  --white-invert: rgba(0, 0, 0, 0.7);
+  --white-invert-l: 4%;
+  --white-invert: #0a0a0a;
   --white-light-l: 100%;
   --white-light: hsla(var(--white-h), var(--white-s), var(--white-light-l), var(--white-a));
   --white-dark-l: 29%;
@@ -12790,7 +12702,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   --black-a: 1;
   --black: hsla(var(--black-h), var(--black-s), var(--black-l), var(--black-a));
   --black-invert-l: 100%;
-  --black-invert: #fff;
+  --black-invert: white;
   --black-light-l: 96%;
   --black-light: hsla(var(--black-h), var(--black-s), var(--black-light-l), var(--black-a));
   --black-dark-l: 57%;
@@ -12883,105 +12795,6 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   --danger-light: hsla(var(--danger-h), var(--danger-s), var(--danger-light-l), var(--danger-a));
   --danger-dark-l: 43%;
   --danger-dark: hsla(var(--danger-h), var(--danger-s), var(--danger-dark-l), var(--danger-a));
-  --black-bis-h: 0deg;
-  --black-bis-s: 0%;
-  --black-bis-l: 7%;
-  --black-bis-a: 1;
-  --black-bis: hsla(var(--black-bis-h), var(--black-bis-s), var(--black-bis-l), var(--black-bis-a));
-  --black-bis-invert-l: 100%;
-  --black-bis-invert: #fff;
-  --black-bis-light-l: 96%;
-  --black-bis-light: hsla(var(--black-bis-h), var(--black-bis-s), var(--black-bis-light-l), var(--black-bis-a));
-  --black-bis-dark-l: 56%;
-  --black-bis-dark: hsla(var(--black-bis-h), var(--black-bis-s), var(--black-bis-dark-l), var(--black-bis-a));
-  --black-ter-h: 0deg;
-  --black-ter-s: 0%;
-  --black-ter-l: 14%;
-  --black-ter-a: 1;
-  --black-ter: hsla(var(--black-ter-h), var(--black-ter-s), var(--black-ter-l), var(--black-ter-a));
-  --black-ter-invert-l: 100%;
-  --black-ter-invert: #fff;
-  --black-ter-light-l: 96%;
-  --black-ter-light: hsla(var(--black-ter-h), var(--black-ter-s), var(--black-ter-light-l), var(--black-ter-a));
-  --black-ter-dark-l: 55%;
-  --black-ter-dark: hsla(var(--black-ter-h), var(--black-ter-s), var(--black-ter-dark-l), var(--black-ter-a));
-  --grey-darker-h: 0deg;
-  --grey-darker-s: 0%;
-  --grey-darker-l: 21%;
-  --grey-darker-a: 1;
-  --grey-darker: hsla(var(--grey-darker-h), var(--grey-darker-s), var(--grey-darker-l), var(--grey-darker-a));
-  --grey-darker-invert-l: 100%;
-  --grey-darker-invert: #fff;
-  --grey-darker-light-l: 96%;
-  --grey-darker-light: hsla(var(--grey-darker-h), var(--grey-darker-s), var(--grey-darker-light-l), var(--grey-darker-a));
-  --grey-darker-dark-l: 54%;
-  --grey-darker-dark: hsla(var(--grey-darker-h), var(--grey-darker-s), var(--grey-darker-dark-l), var(--grey-darker-a));
-  --grey-dark-h: 0deg;
-  --grey-dark-s: 0%;
-  --grey-dark-l: 29%;
-  --grey-dark-a: 1;
-  --grey-dark: hsla(var(--grey-dark-h), var(--grey-dark-s), var(--grey-dark-l), var(--grey-dark-a));
-  --grey-dark-invert-l: 100%;
-  --grey-dark-invert: #fff;
-  --grey-dark-light-l: 96%;
-  --grey-dark-light: hsla(var(--grey-dark-h), var(--grey-dark-s), var(--grey-dark-light-l), var(--grey-dark-a));
-  --grey-dark-dark-l: 51%;
-  --grey-dark-dark: hsla(var(--grey-dark-h), var(--grey-dark-s), var(--grey-dark-dark-l), var(--grey-dark-a));
-  --grey-h: 0deg;
-  --grey-s: 0%;
-  --grey-l: 48%;
-  --grey-a: 1;
-  --grey: hsla(var(--grey-h), var(--grey-s), var(--grey-l), var(--grey-a));
-  --grey-invert-l: 100%;
-  --grey-invert: #fff;
-  --grey-light-l: 96%;
-  --grey-light: hsla(var(--grey-h), var(--grey-s), var(--grey-light-l), var(--grey-a));
-  --grey-dark-l: 43%;
-  --grey-dark: hsla(var(--grey-h), var(--grey-s), var(--grey-dark-l), var(--grey-a));
-  --grey-light-h: 0deg;
-  --grey-light-s: 0%;
-  --grey-light-l: 71%;
-  --grey-light-a: 1;
-  --grey-light: hsla(var(--grey-light-h), var(--grey-light-s), var(--grey-light-l), var(--grey-light-a));
-  --grey-light-invert-l: 100%;
-  --grey-light-invert: #fff;
-  --grey-light-light-l: 96%;
-  --grey-light-light: hsla(var(--grey-light-h), var(--grey-light-s), var(--grey-light-light-l), var(--grey-light-a));
-  --grey-light-dark-l: 29%;
-  --grey-light-dark: hsla(var(--grey-light-h), var(--grey-light-s), var(--grey-light-dark-l), var(--grey-light-a));
-  --grey-lighter-h: 0deg;
-  --grey-lighter-s: 0%;
-  --grey-lighter-l: 86%;
-  --grey-lighter-a: 1;
-  --grey-lighter: hsla(var(--grey-lighter-h), var(--grey-lighter-s), var(--grey-lighter-l), var(--grey-lighter-a));
-  --grey-lighter-invert-l: 0%;
-  --grey-lighter-invert: rgba(0, 0, 0, 0.7);
-  --grey-lighter-light-l: 96%;
-  --grey-lighter-light: hsla(var(--grey-lighter-h), var(--grey-lighter-s), var(--grey-lighter-light-l), var(--grey-lighter-a));
-  --grey-lighter-dark-l: 29%;
-  --grey-lighter-dark: hsla(var(--grey-lighter-h), var(--grey-lighter-s), var(--grey-lighter-dark-l), var(--grey-lighter-a));
-  --white-ter-h: 0deg;
-  --white-ter-s: 0%;
-  --white-ter-l: 96%;
-  --white-ter-a: 1;
-  --white-ter: hsla(var(--white-ter-h), var(--white-ter-s), var(--white-ter-l), var(--white-ter-a));
-  --white-ter-invert-l: 0%;
-  --white-ter-invert: rgba(0, 0, 0, 0.7);
-  --white-ter-light-l: 96%;
-  --white-ter-light: hsla(var(--white-ter-h), var(--white-ter-s), var(--white-ter-light-l), var(--white-ter-a));
-  --white-ter-dark-l: 29%;
-  --white-ter-dark: hsla(var(--white-ter-h), var(--white-ter-s), var(--white-ter-dark-l), var(--white-ter-a));
-  --white-bis-h: 0deg;
-  --white-bis-s: 0%;
-  --white-bis-l: 98%;
-  --white-bis-a: 1;
-  --white-bis: hsla(var(--white-bis-h), var(--white-bis-s), var(--white-bis-l), var(--white-bis-a));
-  --white-bis-invert-l: 0%;
-  --white-bis-invert: rgba(0, 0, 0, 0.7);
-  --white-bis-light-l: 98%;
-  --white-bis-light: hsla(var(--white-bis-h), var(--white-bis-s), var(--white-bis-light-l), var(--white-bis-a));
-  --white-bis-dark-l: 29%;
-  --white-bis-dark: hsla(var(--white-bis-h), var(--white-bis-s), var(--white-bis-dark-l), var(--white-bis-a));
   --input-color: var(--text-strong, #363636);
   --input-background-color: var(--scheme-main, white);
   --input-border-color: var(--border, #dbdbdb);
@@ -13002,6 +12815,18 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   --input-icon-color: var(--border, #dbdbdb);
   --input-icon-active-color: var(--text, #4a4a4a);
   --input-radius: var(--radius, 4px);
+}
+
+:root {
+  --black-bis: #121212;
+  --black-ter: #242424;
+  --grey-darker: #363636;
+  --grey-dark: #4a4a4a;
+  --grey: #7a7a7a;
+  --grey-light: #b5b5b5;
+  --grey-lighter: #dbdbdb;
+  --white-ter: whitesmoke;
+  --white-bis: #fafafa;
 }
 
 :root {
