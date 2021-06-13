@@ -52,7 +52,9 @@
   --size-large: #{$size-large}
   // Color Maps
   +registerCSSVarColors($colors)
-  +registerCSSVarColors($shades)
+  // As long as shades dont have -inver, darl, -light
+  // register those withut modifiers
+  +registerCSSVars($shades)
   // Controls
   +registerCSSVars($css-vars-map, true)
   // Inputs

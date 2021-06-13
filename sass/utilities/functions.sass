@@ -61,6 +61,12 @@
       $value: $value / $number
   @return $value
 
+@function str-split($string, $separator: '-')
+    $i: str-index($string, $separator)
+    @if $i != null
+        @return append(str-slice($string, 1, $i - 1), str-split(str-slice($string, $i + str-length($separator)), $separator))
+    @return $string
+
 @function colorLuminance($color)
   @if type-of($color) != 'color'
     @return 0.55
@@ -121,46 +127,15 @@
     @return $color
   @return rgba($color, $alpha)
 
-@function bulmaCSSVarRgba($name, $alpha)
-  @if type-of($name) == 'string' and map-has-key($colors, $name)
-    @return hsla(var(--#{$name}-h), var(--#{$name}-s), var(--#{$name}-l), #{$alpha})
-  @return $name
-
 @function bulmaDarken($color, $amount)
   @if type-of($color) != 'color'
     @return $color
   @return darken($color, $amount)
 
-@function bulmaCSSVarDarken($name, $amount)
-  @if type-of($name) == 'string' and map-has-key($colors, $name)
-    $name-l: null
-    // if pass var() or calc()
-    @if type-of($amount) == 'string'
-      $name-l: $amount
-    @else if unit($amount) == '%'
-      $name-l: calc(var(--#{$name}-l) - #{$amount})
-    @else
-      @error ('Not supported unit "#{$name}" for alpha!')
-    @return hsla(var(--#{$name}-h), var(--#{$name}-s), #{$name-l}, var(--#{$name}-a))
-  @return $name
-
 @function bulmaLighten($color, $amount)
   @if type-of($color) != 'color'
     @return $color
   @return lighten($color, $amount)
-
-@function bulmaCSSVarLighten($name, $amount)
-  @if type-of($name) == 'string' and map-has-key($colors, $name)
-    $name-l: null
-    // if pass var() or calc()
-    @if type-of($amount) == 'string'
-      $name-l: $amount
-    @else if unit($amount) == '%'
-      $name-l: calc(var(--#{$name}-l) + #{$amount})
-    @else
-      @error ('Not supported unit "#{$name}" for alpha!')
-    @return hsla(var(--#{$name}-h), var(--#{$name}-s), #{$name-l}, var(--#{$name}-a))
-  @return $name
 
 @function bulmaToRGB($color)
   @return red($color), green($color), blue($color)
@@ -181,12 +156,19 @@
     @each $name, $value in $list
       --#{$name}: #{$value}
 
-=registerDynamicScopeCssVar($selector, $css-vars-map: $css-vars-map, $at-root: $at-root)
-  .#{$selector}, [class^="#{$selector}-"]
-    +registerCSSVars($css-vars-map, $at-root)
-
 =registerCSSVarColor($name, $components, $prefix: '')
   $color: nth($components, 1)
+  $color-invert: nth($components, 2)
+  $color-light: null
+  @if length($components) >= 3
+    $color-light: nth($components, 3)
+  @else
+    $color-light: findLightColor($color)
+  $color-dark: null
+  @if length($components) >= 4
+    $color-dark: nth($components, 4)
+  @else
+    $color-dark: findDarkColor($color)
   $base: $prefix + $name
 
   --#{$base}-h: #{hue($color)}
@@ -196,17 +178,17 @@
   --#{$base}: hsla(var(--#{$base}-h), var(--#{$base}-s), var(--#{$base}-l), var(--#{$base}-a))
 
   // Invert color
-  $invert-l: lightness(findColorInvert($color))
+  $invert-l: lightness($color-invert)
   --#{$base}-invert-l: #{$invert-l}
-  --#{$base}-invert: #{findColorInvert($color)}
+  --#{$base}-invert: #{$color-invert}
 
   // Light color
-  $light-l: lightness(findLightColor($color))
+  $light-l: lightness($color-light)
   --#{$base}-light-l: #{$light-l}
   --#{$base}-light: hsla(var(--#{$base}-h), var(--#{$base}-s), var(--#{$base}-light-l), var(--#{$base}-a))
 
   // Dark color
-  $dark-l: lightness(findDarkColor($color))
+  $dark-l: lightness($color-dark)
   --#{$base}-dark-l: #{$dark-l}
   --#{$base}-dark: hsla(var(--#{$base}-h), var(--#{$base}-s), var(--#{$base}-dark-l), var(--#{$base}-a))
 
@@ -216,3 +198,37 @@
 
 @function assignCSSVar($name, $fallback)
   @return var(--#{$name}, #{$fallback})
+
+@function unwrapCSSVar($cssVar)
+  @if type-of($cssVar) == string and str-index($cssVar, "var(") == 1
+    $end-at: (str-index($cssVar, ',') or 0) - 1
+    @return str-slice($cssVar, 7, $end-at)
+  @return $cssVar
+
+@function bulmaCSSVarHsla($color, $alpha)
+  $name: unwrapCSSVar($color)
+  @if type-of($name) == 'string' // and map-has-key($colors, $name)
+    @return hsla(#{var(--#{$name}-h)}, #{var(--#{$name}-s)}, #{var(--#{$name}-l)}, #{$alpha})
+  @return $color
+
+@function bulmaCSSVarDarken($name, $amount)
+  @if type-of($name) == 'string' // and map-has-key($colors, $name)
+    $name-l: null
+    // to be able to pass calc(var(--lightness) - 5%)
+    @if type-of($amount) == 'string'
+      $name-l: $amount
+    @else
+      $name-l: calc(#{var(--#{$name}-l)} - #{$amount})
+    @return hsla(#{var(--#{$name}-h)}, #{var(--#{$name}-s)}, #{$name-l}, #{var(--#{$name}-a)})
+  @return $name
+
+@function bulmaCSSVarLighten($name, $amount)
+  @if type-of($name) == 'string' // and map-has-key($colors, $name)
+    $name-l: null
+    // to be able to pass calc(var(--lightness) - 5%)
+    @if type-of($amount) == 'string'
+      $name-l: $amount
+    @else
+      $name-l: calc(#{var(--#{$name}-l)} + #{$amount})
+    @return hsla(#{var(--#{$name}-h)}, #{var(--#{$name}-s)}, #{$name-l}, #{var(--#{$name}-a)})
+  @return $name

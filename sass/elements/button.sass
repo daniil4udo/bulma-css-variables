@@ -17,7 +17,7 @@ $button-hover-border-color: var(--link-hover-border, #{$link-hover-border}) !def
 $button-focus-color: var(--link-focus, #{$link-focus}) !default
 $button-focus-border-color: var(--link-focus-border, #{$link-focus-border}) !default
 $button-focus-box-shadow-size: 0 0 0 0.125em !default
-$button-focus-box-shadow-color-hsla: bulmaCSSVarRgba('link', 0.25) !default // has to be declared in css vars
+$button-focus-box-shadow-color-hsla: bulmaCSSVarHsla(var(--link, #{$link}), 0.25) !default // has to be declared in css vars
 $button-focus-box-shadow-color: var(--button-focus-box-shadow-color-hsla, #{bulmaRgba($link, 0.25)}) !default
 
 $button-active-color: var(--link-active, #{$link-active}) !default
@@ -182,7 +182,7 @@ $css-vars-map: ('button-color': ($button-color),'button-background-color': ($but
     $color-invert: nth($pair, 2)
     &.is-#{$name}
       --hover-background-color: #{bulmaCSSVarDarken($name, 2.5%)}
-      --focus-box-shadow-color: #{bulmaCSSVarRgba($name, 0.25)}
+      --focus-box-shadow-color: #{bulmaCSSVarHsla($name, 0.25)}
       --active-background-color: #{bulmaCSSVarDarken($name, 5%)}
       background-color: var(--#{$name}, #{$color})
       border-color: transparent
@@ -277,12 +277,8 @@ $css-vars-map: ('button-color': ($button-color),'button-background-color': ($but
         $color-light: nth($pair, 3)
         $color-dark: nth($pair, 4)
         &.is-light
-          --hover-background-l-delta: -2.5%
-          --hover-background-#{$name}-l: calc(#{var(--#{$name}-light-l)} + #{var(--hover-background-l-delta)})
-          --hover-background-color: hsla(var(--#{$name}-h), var(--#{$name}-s), var(--hover-background-#{$name}-l), var(--#{$name}-a))
-          --active-background-l-delta: -5%
-          --active-background-#{$name}-l: calc(#{var(--#{$name}-light-l)} + #{var(--active-background-l-delta)})
-          --active-background-color: hsla(var(--#{$name}-h), var(--#{$name}-s), var(--active-background-#{$name}-l), var(--#{$name}-a))
+          --hover-background-color: #{bulmaCSSVarDarken($name, calc(#{var(--#{$name}-light-l)} - 2.5%))}
+          --active-background-color: #{bulmaCSSVarDarken($name, calc(#{var(--#{$name}-light-l)} - 5%))}
           background-color: var(--#{$name}-light, #{$color-light})
           color: var(--#{$name}-dark, #{$color-dark})
           &:hover,

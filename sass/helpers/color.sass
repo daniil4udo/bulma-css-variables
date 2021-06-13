@@ -16,9 +16,7 @@
     $color-dark: nth($pair, 4)
     // Light
     .has-text-#{$name}-light
-      --has-text-light-hover-delta: -10%
-      --has-text-light-hover-#{$name}-l: calc(#{var(--#{$name}-light-l)} + #{var(--has-text-light-hover-delta)})
-      --has-text-light-hover-color: hsla(var(--#{$name}-h), var(--#{$name}-s), var(--has-text-light-hover-#{$name}-l), var(--#{$name}-a))
+      --has-text-light-hover-color: #{bulmaCSSVarDarken($name, calc(#{var(--#{$name}-light-l)} - 10%))}
       color: var(--#{$name}-light, #{$color-light}) !important
     a.has-text-#{$name}-light
       &:hover,
@@ -28,9 +26,7 @@
       background-color: var(--#{$name}-light, #{$color-light}) !important
     // Dark
     .has-text-#{$name}-dark
-      --has-text-dark-hover-delta: 10%
-      --has-text-dark-hover-#{$name}-l: calc(#{var(--#{$name}-dark-l)} + #{var(--has-text-dark-hover-delta)})
-      --has-text-dark-hover-color: hsla(var(--#{$name}-h), var(--#{$name}-s), var(--has-text-dark-hover-#{$name}-l), var(--#{$name}-a))
+      --has-text-dark-hover-color: #{bulmaCSSVarLighten($name, calc(#{var(--#{$name}-light-l)} + 10%))}
       color: var(--#{$name}-dark, #{$color-dark}) !important
     a.has-text-#{$name}-dark
       &:hover,
