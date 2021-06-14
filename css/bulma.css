@@ -11775,12 +11775,12 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 .hero.is-white.is-bold {
-  background-image: linear-gradient(141deg, hsla(calc(var(--white-h) - 10deg), calc(var(--white-s), + 10%), calc(var(--white-l) - 10%), var(--white-a)) 0%, white 71%, hsla(calc(var(--white-h) + 10deg), calc(var(--white-s), + 5%), calc(var(--white-l) + 5%), var(--white-a)) 100%);
+  background-image: linear-gradient(141deg, hsla(calc(var(--white-h) - 10deg), calc(var(--white-s) + 10%), calc(var(--white-l) - 10%), var(--white-a)) 0%, white 71%, hsla(calc(var(--white-h) + 10deg), calc(var(--white-s) + 5%), calc(var(--white-l) + 5%), var(--white-a)) 100%);
 }
 
 @media screen and (max-width: 768px) {
   .hero.is-white.is-bold .navbar-menu {
-    background-image: linear-gradient(141deg, hsla(calc(var(--white-h) - 10deg), calc(var(--white-s), + 10%), calc(var(--white-l) - 10%), var(--white-a)) 0%, white 71%, hsla(calc(var(--white-h) + 10deg), calc(var(--white-s), + 5%), calc(var(--white-l) + 5%), var(--white-a)) 100%);
+    background-image: linear-gradient(141deg, hsla(calc(var(--white-h) - 10deg), calc(var(--white-s) + 10%), calc(var(--white-l) - 10%), var(--white-a)) 0%, white 71%, hsla(calc(var(--white-h) + 10deg), calc(var(--white-s) + 5%), calc(var(--white-l) + 5%), var(--white-a)) 100%);
   }
 }
 
@@ -11855,12 +11855,12 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 .hero.is-black.is-bold {
-  background-image: linear-gradient(141deg, hsla(calc(var(--black-h) - 10deg), calc(var(--black-s), + 10%), calc(var(--black-l) - 10%), var(--black-a)) 0%, #0a0a0a 71%, hsla(calc(var(--black-h) + 10deg), calc(var(--black-s), + 5%), calc(var(--black-l) + 5%), var(--black-a)) 100%);
+  background-image: linear-gradient(141deg, hsla(calc(var(--black-h) - 10deg), calc(var(--black-s) + 10%), calc(var(--black-l) - 10%), var(--black-a)) 0%, #0a0a0a 71%, hsla(calc(var(--black-h) + 10deg), calc(var(--black-s) + 5%), calc(var(--black-l) + 5%), var(--black-a)) 100%);
 }
 
 @media screen and (max-width: 768px) {
   .hero.is-black.is-bold .navbar-menu {
-    background-image: linear-gradient(141deg, hsla(calc(var(--black-h) - 10deg), calc(var(--black-s), + 10%), calc(var(--black-l) - 10%), var(--black-a)) 0%, #0a0a0a 71%, hsla(calc(var(--black-h) + 10deg), calc(var(--black-s), + 5%), calc(var(--black-l) + 5%), var(--black-a)) 100%);
+    background-image: linear-gradient(141deg, hsla(calc(var(--black-h) - 10deg), calc(var(--black-s) + 10%), calc(var(--black-l) - 10%), var(--black-a)) 0%, #0a0a0a 71%, hsla(calc(var(--black-h) + 10deg), calc(var(--black-s) + 5%), calc(var(--black-l) + 5%), var(--black-a)) 100%);
   }
 }
 
@@ -11935,12 +11935,12 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 .hero.is-light.is-bold {
-  background-image: linear-gradient(141deg, hsla(calc(var(--light-h) - 10deg), calc(var(--light-s), + 10%), calc(var(--light-l) - 10%), var(--light-a)) 0%, whitesmoke 71%, hsla(calc(var(--light-h) + 10deg), calc(var(--light-s), + 5%), calc(var(--light-l) + 5%), var(--light-a)) 100%);
+  background-image: linear-gradient(141deg, hsla(calc(var(--light-h) - 10deg), calc(var(--light-s) + 10%), calc(var(--light-l) - 10%), var(--light-a)) 0%, whitesmoke 71%, hsla(calc(var(--light-h) + 10deg), calc(var(--light-s) + 5%), calc(var(--light-l) + 5%), var(--light-a)) 100%);
 }
 
 @media screen and (max-width: 768px) {
   .hero.is-light.is-bold .navbar-menu {
-    background-image: linear-gradient(141deg, hsla(calc(var(--light-h) - 10deg), calc(var(--light-s), + 10%), calc(var(--light-l) - 10%), var(--light-a)) 0%, whitesmoke 71%, hsla(calc(var(--light-h) + 10deg), calc(var(--light-s), + 5%), calc(var(--light-l) + 5%), var(--light-a)) 100%);
+    background-image: linear-gradient(141deg, hsla(calc(var(--light-h) - 10deg), calc(var(--light-s) + 10%), calc(var(--light-l) - 10%), var(--light-a)) 0%, whitesmoke 71%, hsla(calc(var(--light-h) + 10deg), calc(var(--light-s) + 5%), calc(var(--light-l) + 5%), var(--light-a)) 100%);
   }
 }
 
@@ -12015,12 +12015,12 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 .hero.is-dark.is-bold {
-  background-image: linear-gradient(141deg, hsla(calc(var(--dark-h) - 10deg), calc(var(--dark-s), + 10%), calc(var(--dark-l) - 10%), var(--dark-a)) 0%, #363636 71%, hsla(calc(var(--dark-h) + 10deg), calc(var(--dark-s), + 5%), calc(var(--dark-l) + 5%), var(--dark-a)) 100%);
+  background-image: linear-gradient(141deg, hsla(calc(var(--dark-h) - 10deg), calc(var(--dark-s) + 10%), calc(var(--dark-l) - 10%), var(--dark-a)) 0%, #363636 71%, hsla(calc(var(--dark-h) + 10deg), calc(var(--dark-s) + 5%), calc(var(--dark-l) + 5%), var(--dark-a)) 100%);
 }
 
 @media screen and (max-width: 768px) {
   .hero.is-dark.is-bold .navbar-menu {
-    background-image: linear-gradient(141deg, hsla(calc(var(--dark-h) - 10deg), calc(var(--dark-s), + 10%), calc(var(--dark-l) - 10%), var(--dark-a)) 0%, #363636 71%, hsla(calc(var(--dark-h) + 10deg), calc(var(--dark-s), + 5%), calc(var(--dark-l) + 5%), var(--dark-a)) 100%);
+    background-image: linear-gradient(141deg, hsla(calc(var(--dark-h) - 10deg), calc(var(--dark-s) + 10%), calc(var(--dark-l) - 10%), var(--dark-a)) 0%, #363636 71%, hsla(calc(var(--dark-h) + 10deg), calc(var(--dark-s) + 5%), calc(var(--dark-l) + 5%), var(--dark-a)) 100%);
   }
 }
 
@@ -12095,12 +12095,12 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 .hero.is-primary.is-bold {
-  background-image: linear-gradient(141deg, hsla(calc(var(--primary-h) - 10deg), calc(var(--primary-s), + 10%), calc(var(--primary-l) - 10%), var(--primary-a)) 0%, #00d1b2 71%, hsla(calc(var(--primary-h) + 10deg), calc(var(--primary-s), + 5%), calc(var(--primary-l) + 5%), var(--primary-a)) 100%);
+  background-image: linear-gradient(141deg, hsla(calc(var(--primary-h) - 10deg), calc(var(--primary-s) + 10%), calc(var(--primary-l) - 10%), var(--primary-a)) 0%, #00d1b2 71%, hsla(calc(var(--primary-h) + 10deg), calc(var(--primary-s) + 5%), calc(var(--primary-l) + 5%), var(--primary-a)) 100%);
 }
 
 @media screen and (max-width: 768px) {
   .hero.is-primary.is-bold .navbar-menu {
-    background-image: linear-gradient(141deg, hsla(calc(var(--primary-h) - 10deg), calc(var(--primary-s), + 10%), calc(var(--primary-l) - 10%), var(--primary-a)) 0%, #00d1b2 71%, hsla(calc(var(--primary-h) + 10deg), calc(var(--primary-s), + 5%), calc(var(--primary-l) + 5%), var(--primary-a)) 100%);
+    background-image: linear-gradient(141deg, hsla(calc(var(--primary-h) - 10deg), calc(var(--primary-s) + 10%), calc(var(--primary-l) - 10%), var(--primary-a)) 0%, #00d1b2 71%, hsla(calc(var(--primary-h) + 10deg), calc(var(--primary-s) + 5%), calc(var(--primary-l) + 5%), var(--primary-a)) 100%);
   }
 }
 
@@ -12175,12 +12175,12 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 .hero.is-link.is-bold {
-  background-image: linear-gradient(141deg, hsla(calc(var(--link-h) - 10deg), calc(var(--link-s), + 10%), calc(var(--link-l) - 10%), var(--link-a)) 0%, #485fc7 71%, hsla(calc(var(--link-h) + 10deg), calc(var(--link-s), + 5%), calc(var(--link-l) + 5%), var(--link-a)) 100%);
+  background-image: linear-gradient(141deg, hsla(calc(var(--link-h) - 10deg), calc(var(--link-s) + 10%), calc(var(--link-l) - 10%), var(--link-a)) 0%, #485fc7 71%, hsla(calc(var(--link-h) + 10deg), calc(var(--link-s) + 5%), calc(var(--link-l) + 5%), var(--link-a)) 100%);
 }
 
 @media screen and (max-width: 768px) {
   .hero.is-link.is-bold .navbar-menu {
-    background-image: linear-gradient(141deg, hsla(calc(var(--link-h) - 10deg), calc(var(--link-s), + 10%), calc(var(--link-l) - 10%), var(--link-a)) 0%, #485fc7 71%, hsla(calc(var(--link-h) + 10deg), calc(var(--link-s), + 5%), calc(var(--link-l) + 5%), var(--link-a)) 100%);
+    background-image: linear-gradient(141deg, hsla(calc(var(--link-h) - 10deg), calc(var(--link-s) + 10%), calc(var(--link-l) - 10%), var(--link-a)) 0%, #485fc7 71%, hsla(calc(var(--link-h) + 10deg), calc(var(--link-s) + 5%), calc(var(--link-l) + 5%), var(--link-a)) 100%);
   }
 }
 
@@ -12255,12 +12255,12 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 .hero.is-info.is-bold {
-  background-image: linear-gradient(141deg, hsla(calc(var(--info-h) - 10deg), calc(var(--info-s), + 10%), calc(var(--info-l) - 10%), var(--info-a)) 0%, #3e8ed0 71%, hsla(calc(var(--info-h) + 10deg), calc(var(--info-s), + 5%), calc(var(--info-l) + 5%), var(--info-a)) 100%);
+  background-image: linear-gradient(141deg, hsla(calc(var(--info-h) - 10deg), calc(var(--info-s) + 10%), calc(var(--info-l) - 10%), var(--info-a)) 0%, #3e8ed0 71%, hsla(calc(var(--info-h) + 10deg), calc(var(--info-s) + 5%), calc(var(--info-l) + 5%), var(--info-a)) 100%);
 }
 
 @media screen and (max-width: 768px) {
   .hero.is-info.is-bold .navbar-menu {
-    background-image: linear-gradient(141deg, hsla(calc(var(--info-h) - 10deg), calc(var(--info-s), + 10%), calc(var(--info-l) - 10%), var(--info-a)) 0%, #3e8ed0 71%, hsla(calc(var(--info-h) + 10deg), calc(var(--info-s), + 5%), calc(var(--info-l) + 5%), var(--info-a)) 100%);
+    background-image: linear-gradient(141deg, hsla(calc(var(--info-h) - 10deg), calc(var(--info-s) + 10%), calc(var(--info-l) - 10%), var(--info-a)) 0%, #3e8ed0 71%, hsla(calc(var(--info-h) + 10deg), calc(var(--info-s) + 5%), calc(var(--info-l) + 5%), var(--info-a)) 100%);
   }
 }
 
@@ -12335,12 +12335,12 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 .hero.is-success.is-bold {
-  background-image: linear-gradient(141deg, hsla(calc(var(--success-h) - 10deg), calc(var(--success-s), + 10%), calc(var(--success-l) - 10%), var(--success-a)) 0%, #48c78e 71%, hsla(calc(var(--success-h) + 10deg), calc(var(--success-s), + 5%), calc(var(--success-l) + 5%), var(--success-a)) 100%);
+  background-image: linear-gradient(141deg, hsla(calc(var(--success-h) - 10deg), calc(var(--success-s) + 10%), calc(var(--success-l) - 10%), var(--success-a)) 0%, #48c78e 71%, hsla(calc(var(--success-h) + 10deg), calc(var(--success-s) + 5%), calc(var(--success-l) + 5%), var(--success-a)) 100%);
 }
 
 @media screen and (max-width: 768px) {
   .hero.is-success.is-bold .navbar-menu {
-    background-image: linear-gradient(141deg, hsla(calc(var(--success-h) - 10deg), calc(var(--success-s), + 10%), calc(var(--success-l) - 10%), var(--success-a)) 0%, #48c78e 71%, hsla(calc(var(--success-h) + 10deg), calc(var(--success-s), + 5%), calc(var(--success-l) + 5%), var(--success-a)) 100%);
+    background-image: linear-gradient(141deg, hsla(calc(var(--success-h) - 10deg), calc(var(--success-s) + 10%), calc(var(--success-l) - 10%), var(--success-a)) 0%, #48c78e 71%, hsla(calc(var(--success-h) + 10deg), calc(var(--success-s) + 5%), calc(var(--success-l) + 5%), var(--success-a)) 100%);
   }
 }
 
@@ -12415,12 +12415,12 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 .hero.is-warning.is-bold {
-  background-image: linear-gradient(141deg, hsla(calc(var(--warning-h) - 10deg), calc(var(--warning-s), + 10%), calc(var(--warning-l) - 10%), var(--warning-a)) 0%, #ffe08a 71%, hsla(calc(var(--warning-h) + 10deg), calc(var(--warning-s), + 5%), calc(var(--warning-l) + 5%), var(--warning-a)) 100%);
+  background-image: linear-gradient(141deg, hsla(calc(var(--warning-h) - 10deg), calc(var(--warning-s) + 10%), calc(var(--warning-l) - 10%), var(--warning-a)) 0%, #ffe08a 71%, hsla(calc(var(--warning-h) + 10deg), calc(var(--warning-s) + 5%), calc(var(--warning-l) + 5%), var(--warning-a)) 100%);
 }
 
 @media screen and (max-width: 768px) {
   .hero.is-warning.is-bold .navbar-menu {
-    background-image: linear-gradient(141deg, hsla(calc(var(--warning-h) - 10deg), calc(var(--warning-s), + 10%), calc(var(--warning-l) - 10%), var(--warning-a)) 0%, #ffe08a 71%, hsla(calc(var(--warning-h) + 10deg), calc(var(--warning-s), + 5%), calc(var(--warning-l) + 5%), var(--warning-a)) 100%);
+    background-image: linear-gradient(141deg, hsla(calc(var(--warning-h) - 10deg), calc(var(--warning-s) + 10%), calc(var(--warning-l) - 10%), var(--warning-a)) 0%, #ffe08a 71%, hsla(calc(var(--warning-h) + 10deg), calc(var(--warning-s) + 5%), calc(var(--warning-l) + 5%), var(--warning-a)) 100%);
   }
 }
 
@@ -12495,12 +12495,12 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 .hero.is-danger.is-bold {
-  background-image: linear-gradient(141deg, hsla(calc(var(--danger-h) - 10deg), calc(var(--danger-s), + 10%), calc(var(--danger-l) - 10%), var(--danger-a)) 0%, #f14668 71%, hsla(calc(var(--danger-h) + 10deg), calc(var(--danger-s), + 5%), calc(var(--danger-l) + 5%), var(--danger-a)) 100%);
+  background-image: linear-gradient(141deg, hsla(calc(var(--danger-h) - 10deg), calc(var(--danger-s) + 10%), calc(var(--danger-l) - 10%), var(--danger-a)) 0%, #f14668 71%, hsla(calc(var(--danger-h) + 10deg), calc(var(--danger-s) + 5%), calc(var(--danger-l) + 5%), var(--danger-a)) 100%);
 }
 
 @media screen and (max-width: 768px) {
   .hero.is-danger.is-bold .navbar-menu {
-    background-image: linear-gradient(141deg, hsla(calc(var(--danger-h) - 10deg), calc(var(--danger-s), + 10%), calc(var(--danger-l) - 10%), var(--danger-a)) 0%, #f14668 71%, hsla(calc(var(--danger-h) + 10deg), calc(var(--danger-s), + 5%), calc(var(--danger-l) + 5%), var(--danger-a)) 100%);
+    background-image: linear-gradient(141deg, hsla(calc(var(--danger-h) - 10deg), calc(var(--danger-s) + 10%), calc(var(--danger-l) - 10%), var(--danger-a)) 0%, #f14668 71%, hsla(calc(var(--danger-h) + 10deg), calc(var(--danger-s) + 5%), calc(var(--danger-l) + 5%), var(--danger-a)) 100%);
   }
 }
 
