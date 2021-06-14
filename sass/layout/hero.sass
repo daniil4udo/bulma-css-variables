@@ -86,12 +86,12 @@ $css-vars-map: ('hero-body-padding': ($hero-body-padding),'hero-body-padding-tab
       @if type-of($color) == 'color'
         &.is-bold
           $adjusted-h: calc(#{var(--#{$name}-h)} - 10deg)
-          $adjusted-s: calc(#{var(--#{$name}-s)}, + 10%)
+          $adjusted-s: calc(#{var(--#{$name}-s)} + 10%)
           $adjusted-l: calc(#{var(--#{$name}-l)} - 10%)
           $gradient-top-left: hsla($adjusted-h, $adjusted-s, $adjusted-l, var(--#{$name}-a))
 
           $adjusted-h: calc(#{var(--#{$name}-h)} + 10deg)
-          $adjusted-s: calc(#{var(--#{$name}-s)}, + 5% )
+          $adjusted-s: calc(#{var(--#{$name}-s)} + 5% )
           $adjusted-l: calc(#{var(--#{$name}-l)} + 5%)
           $gradient-bottom-right: hsla($adjusted-h, $adjusted-s, $adjusted-l, var(--#{$name}-a))
 
