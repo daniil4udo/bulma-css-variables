@@ -8,13 +8,14 @@ $control-border-width: 1px !default
 $control-height: 2.5em !default
 $control-line-height: 1.5 !default
 
-$control-padding-vertical: calc(0.5em - #{var(--control-border-width, #{$control-border-width})}) !default
-$control-padding-horizontal: calc(0.75em - #{var(--control-border-width, #{$control-border-width})}) !default
+$control-padding-vertical: calc(0.5em - var(--control-border-width)) !default
+$control-padding-horizontal: calc(0.75em - var(--control-border-width)) !default
 
 // uniq name in that case
 // to register it once
 // in the basic theme
 $css-vars-control: ('control-radius': ($control-radius),'control-radius-small': ($control-radius-small),'control-border-width': ($control-border-width),'control-height': ($control-height),'control-line-height': ($control-line-height),'control-padding-vertical': ($control-padding-vertical),'control-padding-horizontal': ($control-padding-horizontal)) !default
++registerCSSVars($css-vars-control, true)
 
 =control
   -moz-appearance: none
