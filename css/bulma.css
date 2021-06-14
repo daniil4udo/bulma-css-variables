@@ -1,5 +1,15 @@
 /*! bulma.io v0.9.2 | MIT License | github.com/jgthms/bulma */
 /* Bulma Utilities */
+:root {
+  --control-radius: var(--radius, 4px);
+  --control-radius-small: var(--radius-small, 2px);
+  --control-border-width: 1px;
+  --control-height: 2.5em;
+  --control-line-height: 1.5;
+  --control-padding-vertical: calc(0.5em - var(--control-border-width));
+  --control-padding-horizontal: calc(0.75em - var(--control-border-width));
+}
+
 .button, .input, .textarea, .select select, .file-cta,
 .file-name, .pagination-previous,
 .pagination-next,
@@ -16,10 +26,10 @@
   height: var(--control-height, 2.5em);
   justify-content: flex-start;
   line-height: var(--control-line-height, 1.5);
-  padding-bottom: var(--control-padding-vertical, calc(0.5em - var(--control-border-width, 1px)));
-  padding-left: var(--control-padding-horizontal, calc(0.75em - var(--control-border-width, 1px)));
-  padding-right: var(--control-padding-horizontal, calc(0.75em - var(--control-border-width, 1px)));
-  padding-top: var(--control-padding-vertical, calc(0.5em - var(--control-border-width, 1px)));
+  padding-bottom: var(--control-padding-vertical, calc(0.5em - var(--control-border-width)));
+  padding-left: var(--control-padding-horizontal, calc(0.75em - var(--control-border-width)));
+  padding-right: var(--control-padding-horizontal, calc(0.75em - var(--control-border-width)));
+  padding-top: var(--control-padding-vertical, calc(0.5em - var(--control-border-width)));
   position: relative;
   vertical-align: top;
 }
@@ -529,6 +539,16 @@ a.box:hover, a.box:focus {
 
 a.box:active {
   box-shadow: var(--box-link-active-shadow);
+}
+
+:root {
+  --control-radius: var(--radius, 4px);
+  --control-radius-small: var(--radius-small, 2px);
+  --control-border-width: 1px;
+  --control-height: 2.5em;
+  --control-line-height: 1.5;
+  --control-padding-vertical: calc(0.5em - var(--control-border-width));
+  --control-padding-horizontal: calc(0.75em - var(--control-border-width));
 }
 
 :root {
@@ -3491,6 +3511,16 @@ a.tag:hover {
 
 /* Bulma Form */
 :root {
+  --control-radius: var(--radius, 4px);
+  --control-radius-small: var(--radius-small, 2px);
+  --control-border-width: 1px;
+  --control-height: 2.5em;
+  --control-line-height: 1.5;
+  --control-padding-vertical: calc(0.5em - var(--control-border-width));
+  --control-padding-horizontal: calc(0.75em - var(--control-border-width));
+}
+
+:root {
   --input-color: var(--text-strong, #363636);
   --input-background-color: var(--scheme-main, white);
   --input-border-color: var(--border, #dbdbdb);
@@ -3715,8 +3745,8 @@ fieldset[disabled] .select select:-ms-input-placeholder,
 
 .input.is-rounded {
   border-radius: var(--radius-rounded, 9999px);
-  padding-left: calc(calc(0.75em - var(--control-border-width, 1px)) + 0.375em);
-  padding-right: calc(calc(0.75em - var(--control-border-width, 1px)) + 0.375em);
+  padding-left: calc(calc(0.75em - var(--control-border-width)) + 0.375em);
+  padding-right: calc(calc(0.75em - var(--control-border-width)) + 0.375em);
 }
 
 .input.is-static {
@@ -3728,7 +3758,7 @@ fieldset[disabled] .select select:-ms-input-placeholder,
 }
 
 :root {
-  --textarea-padding: var(--control-padding-horizontal, calc(0.75em - var(--control-border-width, 1px)));
+  --textarea-padding: var(--control-padding-horizontal, calc(0.75em - var(--control-border-width)));
   --textarea-max-height: 40em;
   --textarea-min-height: 8em;
 }
@@ -7135,6 +7165,16 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 
 .hero.is-fullheight-with-navbar {
   min-height: calc(100vh - var(--navbar-height));
+}
+
+:root {
+  --control-radius: var(--radius, 4px);
+  --control-radius-small: var(--radius-small, 2px);
+  --control-border-width: 1px;
+  --control-height: 2.5em;
+  --control-line-height: 1.5;
+  --control-padding-vertical: calc(0.5em - var(--control-border-width));
+  --control-padding-horizontal: calc(0.75em - var(--control-border-width));
 }
 
 :root {
