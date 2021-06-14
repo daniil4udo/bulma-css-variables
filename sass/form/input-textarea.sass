@@ -41,8 +41,8 @@ $textarea-colors: $form-colors !default
   @extend %input-textarea
   &.is-rounded
     border-radius: var(--radius-rounded, #{$radius-rounded})
-    padding-left: calc(#{var(--control-padding-horizontal, #{$control-padding-horizontal})} + 0.375em)
-    padding-right: calc(#{var(--control-padding-horizontal, #{$control-padding-horizontal})} + 0.375em)
+    padding-left: calc(#{$control-padding-horizontal} + 0.375em)
+    padding-right: calc(#{$control-padding-horizontal} + 0.375em)
   &.is-static
     background-color: transparent
     border-color: transparent

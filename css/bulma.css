@@ -3715,8 +3715,8 @@ fieldset[disabled] .select select:-ms-input-placeholder,
 
 .input.is-rounded {
   border-radius: var(--radius-rounded, 9999px);
-  padding-left: calc(var(--control-padding-horizontal, calc(0.75em - var(--control-border-width, 1px))) + 0.375em);
-  padding-right: calc(var(--control-padding-horizontal, calc(0.75em - var(--control-border-width, 1px))) + 0.375em);
+  padding-left: calc(calc(0.75em - var(--control-border-width, 1px)) + 0.375em);
+  padding-right: calc(calc(0.75em - var(--control-border-width, 1px)) + 0.375em);
 }
 
 .input.is-static {
