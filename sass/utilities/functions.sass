@@ -61,6 +61,12 @@
       $value: $value / $number
   @return $value
 
+@function str-split($string, $separator: '-')
+    $i: str-index($string, $separator)
+    @if $i != null
+        @return append(str-slice($string, 1, $i - 1), str-split(str-slice($string, $i + str-length($separator)), $separator))
+    @return $string
+
 @function colorLuminance($color)
   @if type-of($color) != 'color'
     @return 0.55
@@ -76,28 +82,43 @@
     $color-rgb: map-merge($color-rgb, ($name: $value))
   @return (map-get($color-rgb, 'red') * .2126) + (map-get($color-rgb, 'green') * .7152) + (map-get($color-rgb, 'blue') * .0722)
 
-@function findColorInvert($color)
-  @if (colorLuminance($color) > 0.55)
-    @return rgba(#000, 0.7)
-  @else
-    @return #fff
 
-@function findLightColor($color)
-  @if type-of($color) == 'color'
-    $l: 96%
-    @if lightness($color) > 96%
-      $l: lightness($color)
-    @return change-color($color, $lightness: $l)
-  @return $background
+@function calculateInvertColor($color)
+  @return if(colorLuminance($color) > 0.55, rgba(#000, 0.7), #fff)
 
-@function findDarkColor($color)
+@function findColorInvert($color, $fallback: null)
   @if type-of($color) == 'color'
-    $base-l: 29%
-    $luminance: colorLuminance($color)
-    $luminance-delta: (0.53 - $luminance)
-    $target-l: round($base-l + ($luminance-delta * 53))
-    @return change-color($color, $lightness: max($base-l, $target-l))
-  @return $text-strong
+    @return calculateInvertColor($color)
+  @else if type-of($fallback) == 'color'
+    @return calculateInvertColor($fallback)
+  @return $color
+
+@function calculateLightColor($color)
+  $l: 96%
+  @if lightness($color) > 96%
+    $l: lightness($color)
+  @return change-color($color, $lightness: $l)
+
+@function findLightColor($color, $fallback: null)
+  @if type-of($color) == 'color'
+    @return calculateLightColor($color)
+  @else if type-of($fallback) == 'color'
+    @return calculateLightColor($fallback)
+  @return $color
+
+@function calculateDarkColor($color)
+  $base-l: 29%
+  $luminance: colorLuminance($color)
+  $luminance-delta: (0.53 - $luminance)
+  $target-l: round($base-l + ($luminance-delta * 53))
+  @return change-color($color, $lightness: max($base-l, $target-l))
+
+@function findDarkColor($color, $fallback: null)
+  @if type-of($color) == 'color'
+    @return calculateDarkColor($color)
+  @else if type-of($fallback) == 'color'
+    @return calculateDarkColor($fallback)
+  @return $color
 
 @function bulmaRgba($color, $alpha)
   @if type-of($color) != 'color'
@@ -113,3 +134,101 @@
   @if type-of($color) != 'color'
     @return $color
   @return lighten($color, $amount)
+
+@function bulmaToRGB($color)
+  @if type-of($color) != 'color'
+      @return $color
+  @return red($color), green($color), blue($color)
+
+=registerCSSVar($name, $value, $at-root: true)
+  @if $at-root
+    @at-root :root
+      --#{$name}: #{$value}
+  @else
+    --#{$name}: #{$value}
+
+=registerCSSVars($list, $at-root: true)
+  @if $at-root
+    @at-root :root
+      @each $name, $value in $list
+        --#{$name}: #{$value}
+  @else
+    @each $name, $value in $list
+      --#{$name}: #{$value}
+
+=registerCSSVarColor($name, $components, $prefix: '')
+  $color: nth($components, 1)
+  $color-invert: nth($components, 2)
+  $color-light: null
+  @if length($components) >= 3
+    $color-light: nth($components, 3)
+  @else
+    $color-light: findLightColor($color)
+  $color-dark: null
+  @if length($components) >= 4
+    $color-dark: nth($components, 4)
+  @else
+    $color-dark: findDarkColor($color)
+  $base: $prefix + $name
+
+  --#{$base}-h: #{hue($color)}
+  --#{$base}-s: #{saturation($color)}
+  --#{$base}-l: #{lightness($color)}
+  --#{$base}-a: 1
+  --#{$base}: hsla(var(--#{$base}-h), var(--#{$base}-s), var(--#{$base}-l), var(--#{$base}-a))
+
+  // Invert color
+  $invert-l: lightness($color-invert)
+  --#{$base}-invert-l: #{$invert-l}
+  --#{$base}-invert: #{$color-invert}
+
+  // Light color
+  $light-l: lightness($color-light)
+  --#{$base}-light-l: #{$light-l}
+  --#{$base}-light: hsla(var(--#{$base}-h), var(--#{$base}-s), var(--#{$base}-light-l), var(--#{$base}-a))
+
+  // Dark color
+  $dark-l: lightness($color-dark)
+  --#{$base}-dark-l: #{$dark-l}
+  --#{$base}-dark: hsla(var(--#{$base}-h), var(--#{$base}-s), var(--#{$base}-dark-l), var(--#{$base}-a))
+
+=registerCSSVarColors($colors, $prefix: '')
+  @each $name, $components in $colors
+    +registerCSSVarColor($name, $components, $prefix)
+
+@function assignCSSVar($name, $fallback)
+  @return var(--#{$name}, #{$fallback})
+
+@function unwrapCSSVar($cssVar)
+  @if type-of($cssVar) == string and str-index($cssVar, "var(") == 1
+    $end-at: (str-index($cssVar, ',') or 0) - 1
+    @return str-slice($cssVar, 7, $end-at)
+  @return $cssVar
+
+@function bulmaCSSVarHsla($color, $alpha)
+  $name: unwrapCSSVar($color)
+  @if type-of($name) == 'string' // and map-has-key($colors, $name)
+    @return hsla(#{var(--#{$name}-h)}, #{var(--#{$name}-s)}, #{var(--#{$name}-l)}, #{$alpha})
+  @return $color
+
+@function bulmaCSSVarDarken($name, $amount)
+  @if type-of($name) == 'string' // and map-has-key($colors, $name)
+    $name-l: null
+    // to be able to pass calc(var(--lightness) - 5%)
+    @if type-of($amount) == 'string'
+      $name-l: $amount
+    @else
+      $name-l: calc(#{var(--#{$name}-l)} - #{$amount})
+    @return hsla(#{var(--#{$name}-h)}, #{var(--#{$name}-s)}, #{$name-l}, #{var(--#{$name}-a)})
+  @return $name
+
+@function bulmaCSSVarLighten($name, $amount)
+  @if type-of($name) == 'string' // and map-has-key($colors, $name)
+    $name-l: null
+    // to be able to pass calc(var(--lightness) - 5%)
+    @if type-of($amount) == 'string'
+      $name-l: $amount
+    @else
+      $name-l: calc(#{var(--#{$name}-l)} + #{$amount})
+    @return hsla(#{var(--#{$name}-h)}, #{var(--#{$name}-s)}, #{$name-l}, #{var(--#{$name}-a)})
+  @return $name
