@@ -7,6 +7,9 @@
     "email": "bbxdesign@gmail.com",
     "url": "https://jgthms.com"
   },
+  "maintainers": [
+    "Daniil Chumachenko <daniil4udo@gmail.com>"
+  ],
   "description": "Modern CSS framework based on Flexbox and CSS Variables",
   "main": "bulma.sass",
   "unpkg": "css/bulma.css",
