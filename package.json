@@ -57,9 +57,5 @@
     "bulma.sass",
     "LICENSE",
     "README.md"
-  ],
-  "dependencies": {
-    "metalsmith": "^2.3.0",
-    "metalsmith-filter": "^1.0.2"
-  }
+  ]
 }
