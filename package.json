@@ -13,18 +13,20 @@
   "style": "bulma/css/bulma.min.css",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jgthms/bulma.git"
+    "url": "git+https://github.com/dino4udo/bulma.git"
   },
   "license": "MIT",
   "keywords": [
     "css",
+    "css vars",
+    "css properties",
     "sass",
     "flexbox",
     "responsive",
     "framework"
   ],
   "bugs": {
-    "url": "https://github.com/jgthms/bulma/issues"
+    "url": "https://github.com/dino4udo/bulma/issues"
   },
   "devDependencies": {
     "autoprefixer": "^9.8.0",

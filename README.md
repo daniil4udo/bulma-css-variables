@@ -1,6 +1,7 @@
-# [Bulma](https://bulma.io)
+# [Bulma CSS Properties](https://bulma.io)
 
-Bulma is a **modern CSS framework** based on [Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes).
+Bulma is a **modern CSS framework** based on [Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes). 
+That is implementation of Bulma with CSS Variables
 
 ![Github](https://img.shields.io/github/v/release/jgthms/bulma?logo=Bulma)
 [![npm](https://img.shields.io/npm/v/bulma.svg)][npm-link]
