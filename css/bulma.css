@@ -3319,6 +3319,7 @@ a.tag:hover {
 
 :root {
   --title-sub-size: 0.75em;
+  --title-family: false;
   --title-sup-size: 0.75em;
   --title-color: var(--text-strong, #363636);
   --title-font-size: var(--size-3, 2rem);
@@ -3327,6 +3328,7 @@ a.tag:hover {
   --title-strong-color: inherit;
   --title-strong-weight: inherit;
   --subtitle-color: var(--text, #4a4a4a);
+  --subtitle-family: false;
   --subtitle-font-size: var(--size-5, 1.25rem);
   --subtitle-weight: var(--weight-normal, 400);
   --subtitle-line-height: 1.25;
