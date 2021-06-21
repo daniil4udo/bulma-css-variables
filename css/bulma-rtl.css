@@ -583,18 +583,18 @@ a.box:active {
 }
 
 .button .icon:first-child:not(:last-child) {
-  margin-right: calc(-1 / 2 * var(--button-padding-horizontal, 1em) - var(--button-border-width, var(--control-border-width, 1px)));
-  margin-left: calc(var(--button-padding-horizontal, 1em) / 4);
+  margin-right: calc(-0.5 * var(--button-padding-horizontal, 1em) - var(--button-border-width, var(--control-border-width, 1px)));
+  margin-left: calc(var(--button-padding-horizontal, 1em) * 0.25);
 }
 
 .button .icon:last-child:not(:first-child) {
-  margin-right: calc(var(--button-padding-horizontal, 1em) / 4);
-  margin-left: calc(-1 / 2 * var(--button-padding-horizontal, 1em) - var(--button-border-width, var(--control-border-width, 1px)));
+  margin-right: calc(var(--button-padding-horizontal, 1em) * 0.25);
+  margin-left: calc(-0.5 * var(--button-padding-horizontal, 1em) - var(--button-border-width, var(--control-border-width, 1px)));
 }
 
 .button .icon:first-child:last-child {
-  margin-left: calc(-1 / 2 * var(--button-padding-horizontal, 1em) - var(--button-border-width, var(--control-border-width, 1px)));
-  margin-right: calc(-1 / 2 * var(--button-padding-horizontal, 1em) - var(--button-border-width, var(--control-border-width, 1px)));
+  margin-left: calc(-0.5 * var(--button-padding-horizontal, 1em) - var(--button-border-width, var(--control-border-width, 1px)));
+  margin-right: calc(-0.5 * var(--button-padding-horizontal, 1em) - var(--button-border-width, var(--control-border-width, 1px)));
 }
 
 .button:hover, .button.is-hovered {
@@ -1899,8 +1899,8 @@ fieldset[disabled] .button {
 
 .button.is-loading::after {
   position: absolute;
-  left: calc(50% - (1em / 2));
-  top: calc(50% - (1em / 2));
+  left: calc(50% - (1em * 0.5));
+  top: calc(50% - (1em * 0.5));
   position: absolute !important;
 }
 
@@ -5284,7 +5284,7 @@ button.dropdown-item.is-active {
 }
 
 :root {
-  --level-item-spacing: calc(var(--block-spacing, 1.5rem) / 2);
+  --level-item-spacing: calc(var(--block-spacing, 1.5rem) * 0.5);
 }
 
 .level {

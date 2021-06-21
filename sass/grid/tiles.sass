@@ -39,4 +39,4 @@ $css-vars-map: ('tile-spacing': ($tile-spacing))
     @for $i from 1 through 12
       &.is-#{$i}
         flex: none
-        width: ($i / 12) * 100%
+        width: (divide($i, 12)) * 100%

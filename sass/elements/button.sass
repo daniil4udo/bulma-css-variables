@@ -124,14 +124,14 @@ $css-vars-map: ('button-color': ($button-color),'button-background-color': ($but
       height: 1.5em
       width: 1.5em
     &:first-child:not(:last-child)
-      +ltr-property("margin", calc(-1 / 2 * #{var(--button-padding-horizontal, #{$button-padding-horizontal})} - #{var(--button-border-width, #{$button-border-width})}), false)
-      +ltr-property("margin", calc(#{var(--button-padding-horizontal, #{$button-padding-horizontal})} / 4))
+      +ltr-property("margin", calc(-0.5 * #{var(--button-padding-horizontal, #{$button-padding-horizontal})} - #{var(--button-border-width, #{$button-border-width})}), false)
+      +ltr-property("margin", calc(#{var(--button-padding-horizontal, #{$button-padding-horizontal})} * 0.25))
     &:last-child:not(:first-child)
-      +ltr-property("margin", calc(#{var(--button-padding-horizontal, #{$button-padding-horizontal})} / 4), false)
-      +ltr-property("margin", calc(-1 / 2 * #{var(--button-padding-horizontal, #{$button-padding-horizontal})} - #{var(--button-border-width, #{$button-border-width})}))
+      +ltr-property("margin", calc(#{var(--button-padding-horizontal, #{$button-padding-horizontal})} * 0.25), false)
+      +ltr-property("margin", calc(-0.5 * #{var(--button-padding-horizontal, #{$button-padding-horizontal})} - #{var(--button-border-width, #{$button-border-width})}))
     &:first-child:last-child
-      margin-left: calc(-1 / 2 * #{var(--button-padding-horizontal, #{$button-padding-horizontal})} - #{var(--button-border-width, #{$button-border-width})})
-      margin-right: calc(-1 / 2 * #{var(--button-padding-horizontal, #{$button-padding-horizontal})} - #{var(--button-border-width, #{$button-border-width})})
+      margin-left: calc(-0.5 * #{var(--button-padding-horizontal, #{$button-padding-horizontal})} - #{var(--button-border-width, #{$button-border-width})})
+      margin-right: calc(-0.5 * #{var(--button-padding-horizontal, #{$button-padding-horizontal})} - #{var(--button-border-width, #{$button-border-width})})
   // States
   &:hover,
   &.is-hovered

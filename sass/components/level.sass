@@ -1,6 +1,6 @@
 @import "../utilities/mixins"
 
-$level-item-spacing: calc(var(--block-spacing, #{$block-spacing}) / 2) !default
+$level-item-spacing: calc(#{var(--block-spacing, #{$block-spacing})} * 0.5) !default
 
 $css-vars-map: ('level-item-spacing': ($level-item-spacing))
 // --level-item-spacing: #{$level-item-spacing}
