@@ -1,4 +1,4 @@
-/*! bulma-css-variables v0.9.32 | MIT License | github.com/dino4udo/bulma-css-variables */
+/*! bulma-css-variables v0.9.33 | MIT License | github.com/dino4udo/bulma-css-variables */
 /* Bulma Utilities */
 .button, .input, .textarea, .select select, .file-cta,
 .file-name, .pagination-previous,
@@ -12750,6 +12750,14 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   --danger-light: hsla(var(--danger-h), var(--danger-s), var(--danger-light-l), var(--danger-a));
   --danger-dark-l: 43%;
   --danger-dark: hsla(var(--danger-h), var(--danger-s), var(--danger-dark-l), var(--danger-a));
+  --control-font-size: var(--size-normal, 1rem);
+  --control-radius: var(--radius, 4px);
+  --control-radius-small: var(--radius-small, 2px);
+  --control-border-width: 1px;
+  --control-height: 2.5em;
+  --control-line-height: 1.5;
+  --control-padding-vertical: calc(0.5em - 1px);
+  --control-padding-horizontal: calc(0.75em - 1px);
   --input-color: var(--text-strong, #363636);
   --input-background-color: var(--scheme-main, white);
   --input-border-color: var(--border, #dbdbdb);
@@ -12782,11 +12790,5 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   --grey-lighter: #dbdbdb;
   --white-ter: whitesmoke;
   --white-bis: #fafafa;
-}
-
-:root {
-  --footer-background-color: var(--scheme-main-bis, #fafafa);
-  --footer-color: false;
-  --footer-padding: 3rem 1.5rem 6rem;
 }
 /*# sourceMappingURL=bulma.css.map */
