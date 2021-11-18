@@ -4121,7 +4121,7 @@ fieldset[disabled] .select select:hover {
 }
 
 .file.is-white .file-cta {
-  background-color: var(--white, white);
+  background-color: var(--white white);
   border-color: transparent;
   color: var(--white-invert, #0a0a0a);
 }
@@ -4152,7 +4152,7 @@ fieldset[disabled] .select select:hover {
 }
 
 .file.is-black .file-cta {
-  background-color: var(--black, #0a0a0a);
+  background-color: var(--black #0a0a0a);
   border-color: transparent;
   color: var(--black-invert, white);
 }
@@ -4183,7 +4183,7 @@ fieldset[disabled] .select select:hover {
 }
 
 .file.is-light .file-cta {
-  background-color: var(--light, whitesmoke);
+  background-color: var(--light whitesmoke);
   border-color: transparent;
   color: var(--light-invert, rgba(0, 0, 0, 0.7));
 }
