@@ -1,4 +1,4 @@
-/*! bulma-css-variables v0.9.33 | MIT License | github.com/dino4udo/bulma-css-variables */
+/*! bulma-css-variables v0.9.4 | MIT License | github.com/dino4udo/bulma-css-variables */
 /* Bulma Utilities */
 .button, .input, .textarea, .select select, .file-cta,
 .file-name, .pagination-previous,
@@ -4121,7 +4121,7 @@ fieldset[disabled] .select select:hover {
 }
 
 .file.is-white .file-cta {
-  background-color: var(--white white);
+  background-color: var(--white, white);
   border-color: transparent;
   color: var(--white-invert, #0a0a0a);
 }
@@ -4152,7 +4152,7 @@ fieldset[disabled] .select select:hover {
 }
 
 .file.is-black .file-cta {
-  background-color: var(--black #0a0a0a);
+  background-color: var(--black, #0a0a0a);
   border-color: transparent;
   color: var(--black-invert, white);
 }
@@ -4183,7 +4183,7 @@ fieldset[disabled] .select select:hover {
 }
 
 .file.is-light .file-cta {
-  background-color: var(--light whitesmoke);
+  background-color: var(--light, whitesmoke);
   border-color: transparent;
   color: var(--light-invert, rgba(0, 0, 0, 0.7));
 }
@@ -4214,7 +4214,7 @@ fieldset[disabled] .select select:hover {
 }
 
 .file.is-dark .file-cta {
-  background-color: var(--dark #363636);
+  background-color: var(--dark, #363636);
   border-color: transparent;
   color: var(--dark-invert, #fff);
 }
@@ -4245,7 +4245,7 @@ fieldset[disabled] .select select:hover {
 }
 
 .file.is-primary .file-cta {
-  background-color: var(--primary #00d1b2);
+  background-color: var(--primary, #00d1b2);
   border-color: transparent;
   color: var(--primary-invert, #fff);
 }
@@ -4276,7 +4276,7 @@ fieldset[disabled] .select select:hover {
 }
 
 .file.is-link .file-cta {
-  background-color: var(--link #485fc7);
+  background-color: var(--link, #485fc7);
   border-color: transparent;
   color: var(--link-invert, #fff);
 }
@@ -4307,7 +4307,7 @@ fieldset[disabled] .select select:hover {
 }
 
 .file.is-info .file-cta {
-  background-color: var(--info #3e8ed0);
+  background-color: var(--info, #3e8ed0);
   border-color: transparent;
   color: var(--info-invert, #fff);
 }
@@ -4338,7 +4338,7 @@ fieldset[disabled] .select select:hover {
 }
 
 .file.is-success .file-cta {
-  background-color: var(--success #48c78e);
+  background-color: var(--success, #48c78e);
   border-color: transparent;
   color: var(--success-invert, #fff);
 }
@@ -4369,7 +4369,7 @@ fieldset[disabled] .select select:hover {
 }
 
 .file.is-warning .file-cta {
-  background-color: var(--warning #ffe08a);
+  background-color: var(--warning, #ffe08a);
   border-color: transparent;
   color: var(--warning-invert, rgba(0, 0, 0, 0.7));
 }
@@ -4400,7 +4400,7 @@ fieldset[disabled] .select select:hover {
 }
 
 .file.is-danger .file-cta {
-  background-color: var(--danger #f14668);
+  background-color: var(--danger, #f14668);
   border-color: transparent;
   color: var(--danger-invert, #fff);
 }
