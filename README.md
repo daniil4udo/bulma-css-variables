@@ -2,6 +2,14 @@
 
 Bulma is a **modern CSS framework** based on [Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) and [CSS Variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
 
+## ⚠️ DEPRECATION WARNING ⚠️
+
+This package has been deprecated.
+
+Please find new and updated Bulma with CSS Variables at [@bulvar/bulma](https://github.com/daniil4udo/bulvar)
+
+For those who using Buefy, all styles avaliable at `@bulvar/buefy` (already includes `@bulvar/bulma` as dependency)
+
 ## Quick install
 
 Bulma is constantly in development! Try it out now:
