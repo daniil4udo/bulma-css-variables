@@ -91,10 +91,10 @@
     },
     "papersowl": {
       "name": "PapersOwl",
-      "url": "https://papersowl.com/write-my-essay-please",
+      "url": "https://papersowl.com/write-my-research-paper",
       "title": "write my essay please",
-      "width": "126",
-      "height": "42",
+      "width": "192",
+      "height": "48",
       "follow": true
     },
     "sparheld": {
@@ -477,6 +477,45 @@
       "width": "125",
       "height": "38",
       "follow": true
+    },
+    "ozzytyres": {
+      "name": "ozzytyres",
+      "url": "https://www.ozzytyres.com.au/news/ford-falcon-au-mag-wheels",
+      "title": "falcon wheels",
+      "width": "64",
+      "height": "64",
+      "follow": true
+    },
+    "nongamstopwager": {
+      "name": "nongamstopwager",
+      "url": "https://www.nongamstopwager.com",
+      "title": "NonGamStopWager.com",
+      "width": "139",
+      "height": "51",
+      "follow": true
+    },
+    "pmibet": {
+      "name": "pmibet",
+      "url": "https://parimatch.in/en/cricket/live",
+      "title": "check the highest cricket live rates",
+      "width": "180",
+      "height": "80",
+      "follow": true
+    },
+    "qberror": {
+      "name": "qberror",
+      "url": "https://qberror.com/",
+      "title": "qberror",
+      "width": "187",
+      "height": "69",
+      "follow": true
+    },
+    "casinoshunter": {
+      "name": "casinoshunter",
+      "url": "https://casinoshunter.com/online-casinos/",
+      "title": "Best Online Casinos Canada",
+      "width": "150",
+      "height": "50"
     }
   },
   "home": [
@@ -486,7 +525,6 @@
     ,"clothingric"
     ,"emucoupon"
     ,"namobot"
-    ,"firesticktricks"
     ,"realtimecommunications"
     ,"polygon"
     ,"bonusfinder"
@@ -498,21 +536,22 @@
     ,"casinofiables"
     ,"123calendars"
     ,"quickbookstoolhub"
-    ,"aussiecasinohex"
     ,"kasynohex"
     ,"betrouwbaar-casino"
     ,"anbefalt"
     ,"cryptocasinos"
     ,"writepaperfor"
-    ,"gambledex"
-    ,"wagerdex"
     ,"reddogcasino"
     ,"rapidessay"
-    ,"quickbooksfiledoctor"
     ,"onlinecasinohex"
     ,"idealecasinos"
     ,"casinotopitaly"
     ,"inkedin"
+    ,"nongamstopwager"
+    ,"pmibet"
+    ,"qberror"
+    ,"casinoshunter"
+    ,"papersowl"
   ],
   "footer": ["polygon", "inkoop"]
 }
