@@ -515,7 +515,58 @@
       "url": "https://casinoshunter.com/online-casinos/",
       "title": "Best Online Casinos Canada",
       "width": "150",
-      "height": "50"
+      "height": "50",
+      "follow": true
+    },
+    "listcasino": {
+      "name": "list.casino",
+      "url": "https://list.casino/pay-n-play/",
+      "title": "Best Online Casinos Canada",
+      "width": "165",
+      "height": "45"
+    },
+    "flyclipart": {
+      "name": "flyclipart",
+      "url": "https://flyclipart.com/",
+      "title": "flyclipart",
+      "width": "150",
+      "height": "43",
+      "follow": true
+    },
+    "slotsempire": {
+      "name": "slotsempire",
+      "url": "https://slotsempire.com/",
+      "title": "empire of slots online",
+      "width": "120",
+      "height": "39"
+    },
+    "nycjackets": {
+      "name": "nycjackets",
+      "url": "https://www.nycjackets.com/",
+      "title": "nycjackets",
+      "width": "120",
+      "height": "54"
+    },
+    "theleathercity": {
+      "name": "theleathercity",
+      "url": "https://www.theleathercity.com/",
+      "title": "theleathercity",
+      "width": "178",
+      "height": "30"
+    },
+    "realcasinoscanada": {
+      "name": "realcasinoscanada",
+      "url": "https://realcasinoscanada.com/",
+      "title": "realcasinoscanada",
+      "width": "210",
+      "height": "64"
+    },
+    "jrop": {
+      "name": "jrop",
+      "url": "https://www.jrop.com/services/towing/",
+      "title": "jrop",
+      "width": "120",
+      "height": "65"
     }
   },
   "home": [
@@ -533,7 +584,6 @@
     ,"dfds"
     ,"rajbet"
     ,"gamblizard"
-    ,"casinofiables"
     ,"123calendars"
     ,"quickbookstoolhub"
     ,"kasynohex"
@@ -552,6 +602,13 @@
     ,"qberror"
     ,"casinoshunter"
     ,"papersowl"
+    ,"listcasino"
+    ,"flyclipart"
+    ,"slotsempire"
+    ,"nycjackets"
+    ,"theleathercity"
+    ,"realcasinoscanada"
+    ,"jrop"
   ],
   "footer": ["polygon", "inkoop"]
 }
